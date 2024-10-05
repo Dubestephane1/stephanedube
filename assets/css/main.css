@@ -1,12 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,900");
 @import url("fontawesome-all.min.css");
 
-/*
-	Aerial by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
-
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -226,7 +220,7 @@ input, select, textarea {
 		transform: translate3d(0,0,0);
 	/* Set your background with this */
 
-		background: #757575 url("images/light-bulb-4514505_1280.jpg") bottom left;
+		background: #464646 url("images/light-bulb-4514505_1280.jpg") bottom left;
 		background-repeat: repeat-x;
 		height: 100%;
 		left: 0;
@@ -1079,3 +1073,23 @@ input, select, textarea {
 		#header nav {
 			padding: 0 1em;
 		} }
+
+	.icon-circle {
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		width: 75px; /* Adjust size as needed */
+		height: 75px; /* Adjust size as needed */
+		border-radius: 80%;
+		background-color: transparent; /* Background color */
+		border: 1px solid #ffffff; /* Border color */
+		overflow: hidden; /* Ensure overflow is hidden */
+    	transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+		display: block; /* Ensure the SVG is treated as a block element */	
+	}
+	.icon-circle:hover {
+		background-color: rgba(210, 210, 210, 0.35); /* Background color on hover */
+		transform: scale(1.1); /* Scale up the circle on hover */
+		}
+
+		
