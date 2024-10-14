@@ -1002,7 +1002,16 @@ input, select, textarea {
 		transform: scale(1.1); /* Scale up the circle on hover */
 		}
 	
-		.bi-github, .bi-envelope-fill {
+		.bi-envelope-fill {
 			font-size: 24px;
+		}
+
+		.bi-github {
+			font-size: 24px;
+		}
+
+		.bi-paypal {
+			margin-top: 0.4rem;
+			margin-bottom: -0.6rem;
 		}
 		
