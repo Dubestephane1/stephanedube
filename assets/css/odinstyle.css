@@ -1,0 +1,482 @@
+/* 
+Px for ICON sizes, BORDERS (width, radius, etc), MARGINS, padding or details.
+% for PADDING inside a container and GAP between elements inside a container.
+VH is for viewport height.
+VW is for viewport width is good for the width of the responsive width of the website.
+REM default is 16px=1rem,FONT sizes, GAP, padding and marging.
+EM for the gap between the LINE HEIGHT and PADDING for button.
+*/
+
+:root {font-size: 62.5%;} /* Change the base 16 rem unit to base 10 */
+body {font-size: 1.6rem;} /* Make 1 REM = 10 PX, but make it responsive */
+
+/*************************/
+/*   SHAPES begin here   */
+/*************************/
+.square {
+    border: 1px solid; /* blue border */
+    display: inline-block; /* make it visible on the page */
+}
+
+.rectangle {
+    border: 1px solid; /* blue border */
+    display: inline-block; /* make it visible on the page */
+}
+
+.circle {
+    border: 1px solid; /* blue border */
+    display: inline-block; /* make it visible on the page */
+    border-radius: 50%; /* make it a circle */
+}
+
+.ellipse {
+    border: 1px solid; /* blue border */
+    display: inline-block; /* make it visible on the page */
+    border-radius: 50px/25px; /* make it an ellipse */
+}
+
+.oval {
+    border: 1px solid; /* blue border */
+    display: inline-block; /* make it visible on the page */
+    border-radius: 50px/25px; /* make it an oval */
+}
+
+/*********************************************/
+/*   COLORS start here (43 colors for now)   */
+/*********************************************/
+
+/* Primary Colors */
+.blue { color: #0000FF; }
+.light-blue { color: #add8e6; }
+.dark-blue { color: #00008b; }
+
+.red { color: #FF0000; }
+.light-red { color: #FFC0CB; }
+.dark-red { color: #8B0000; }
+
+.yellow { color: #FFFF00; }
+.light-yellow { color: #FFFFE0; }
+.dark-yellow { color: #808000; }
+
+/* Secondary Colors */
+.green { color: #008000; }
+.light-green { color: #C6E2B5; }
+.dark-green { color: #003300; }
+
+.orange { color: #FFA500; }
+.light-orange { color: #FFD700; }
+.dark-orange { color: #FF8C00; }
+
+.purple { color: #800080; }
+.light-purple { color: #C7B8EA; }
+.dark-purple { color: #3B0B3B; }
+
+/* some Tertiary Colors */
+.teal { color: #0097FF;}
+.lime { color: #32CD32;}
+.coral { color: #FFC67D;}
+.fuchsia { color: #FF00FF;}
+.amber { color: #FFC080;}
+.indigo { color: #4B0082;}
+.beige { color: #F5F5DC;}
+
+/* Black and White */
+.black { color: #000000; }
+.white { color: #FFFFFF; }
+
+/* often used Colors */
+.pink { color: #FFC0CB; }
+.light-pink { color: #FFB6C1; }
+.dark-pink { color: #E5A9BC; }
+
+.brown { color: #A52A2A; }
+.light-brown { color: #964B00; }
+.dark-brown { color: #452B1F; }
+
+.grey { color: #808080; }
+.light-grey { color: #C0C0C0; }
+.dark-grey { color: #333333; }
+
+.gold { color: #FFD700; }
+.silver { color: #B1B1B1; }
+.bronze { color: #CD7F32; }
+.copper { color: #B2875F; }
+.brass { color: #CFD4D5; }
+.chromium { color: #003333; }
+.titanium { color: #7F7F90; }
+
+/***********************************/
+/*   BACKGROUND-COLOR start here   */
+/***********************************/
+
+.blue-bg { background-color: #0000FF; }
+.light-blue-bg { background-color: #add8e6; }
+.dark-blue-bg { background-color: #00008b; }
+
+.red-bg { background-color: #FF0000; }
+.light-red-bg { background-color: #FFC0CB; }
+.dark-red-bg { background-color: #8B0000; }
+
+.green-bg { background-color: #008000; }
+.light-green-bg { background-color: #C6E2B5; }
+.dark-green-bg { background-color: #003300; }
+
+.yellow-bg { background-color: #FFFF00; }
+.light-yellow-bg { background-color: #FFFFE0; }
+.dark-yellow-bg { background-color: #808000; }
+
+.orange-bg { background-color: #FFA500; }
+.light-orange-bg { background-color: #FFD700; }
+.dark-orange-bg { background-color: #FF8C00; }
+
+.purple-bg { background-color: #800080; }
+.light-purple-bg { background-color: #C7B8EA; }
+.dark-purple-bg { background-color: #3B0B3B; }
+
+.pink-bg { background-color: #FFC0CB; }
+.light-pink-bg { background-color: #FFB6C1; }
+.dark-pink-bg { background-color: #E5A9BC; }
+
+.brown-bg { background-color: #A52A2A; }
+.light-brown-bg { background-color: #964B00; }
+.dark-brown-bg { background-color: #452B1F; }
+
+.grey-bg { background-color: #808080; }
+.light-grey-bg { background-color: #C0C0C0; }
+.dark-grey-bg { background-color: #333333; }
+
+.black-bg { background-color: #000000; }
+.white-bg { background-color: #FFFFFF; }
+
+.teal-bg { background-color: #0097FF;}
+.lime-bg { background-color: #32CD32;}
+.coral-bg { background-color: #FFC67D;}
+.fuchsia-bg { background-color: #FF00FF;}
+.amber-bg { background-color: #FFC080;}
+.indigo-bg { background-color: #4B0082;}
+.beige-bg { background-color: #F5F5DC;}
+
+.gold-bg { background-color: #FFD700; }
+.silver-bg { background-color: #B1B1B1; }
+.bronze-bg { background-color: #CD7F32; }
+.copper-bg { background-color: #B2875F; }
+.brass-bg { background-color: #CFD4D5; }
+.chromium-bg { background-color: #003333; }
+.titanium-bg { background-color: #7F7F90; }
+
+/*****************************/
+/*   TEXT-COLOR start here   */
+/*****************************/
+
+.blue-txt { color: #0000FF; }
+.light-blue-txt { color: #add8e6; }
+.dark-blue-txt { color: #00008b; }
+
+.red-txt { color: #FF0000; }
+.light-red-txt { color: #FFC0CB; }
+.dark-red-txt { color: #8B0000; }
+
+.green-txt { color: #008000; }
+.light-green-txt { color: #C6E2B5; }
+.dark-green-txt { color: #003300; }
+
+.yellow-txt { color: #FFFF00; }
+.light-yellow-txt { color: #FFFFE0; }
+.dark-yellow-txt { color: #808000; }
+
+.orange-txt { color: #FFA500; }
+.light-orange-txt { color: #FFD700; }
+.dark-orange-txt { color: #FF8C00; }
+
+.purple-txt { color: #800080; }
+.light-purple-txt { color: #C7B8EA; }
+.dark-purple-txt { color: #3B0B3B; }
+
+.pink-txt { color: #FFC0CB; }
+.light-pink-txt { color: #FFB6C1; }
+.dark-pink-txt { color: #E5A9BC; }
+
+.brown-txt { color: #A52A2A; }
+.light-brown-txt { color: #964B00; }
+.dark-brown-txt { color: #452B1F; }
+
+.grey-txt { color: #808080; }
+.light-grey-txt { color: #C0C0C0; }
+.dark-grey-txt { color: #333333; }
+
+.black-txt { color: #000000; }
+.white-txt { color: #FFFFFF; }
+
+.teal-txt { color: #0097FF;}
+.lime-txt { color: #32CD32;}
+.coral-txt { color: #FFC67D;}
+.fuchsia-txt { color: #FF00FF;}
+.amber-txt { color: #FFC080;}
+.indigo-txt { color: #4B0082;}
+.beige-txt { color: #F5F5DC;}
+
+.gold-txt { color: #FFD700; }
+.silver-txt { color: #B1B1B1; }
+.bronze-txt { color: #CD7F32; }
+.copper-txt { color: #B2875F; }
+.brass-txt { color: #CFD4D5; }
+.chromium-txt { color: #003333; }
+.titanium-txt{ color: #7F7F90; }
+
+/*************************/
+/*   BORDER COLOR start here   */
+/*************************/
+
+.blue-border { border: #0000FF; }
+.light-blue-border { border: #add8e6; }
+.dark-blue-border { border: #00008b; }
+
+.red-border { border: #FF0000; }
+.light-red-border { border: #FFC0CB; }
+.dark-red-border { border: #8B0000; }
+
+.green-border { border: #008000; }
+.light-green-border { border: #C6E2B5; }
+.dark-green-border { border: #003300; }
+
+.yellow-border { border: #FFFF00; }
+.light-yellow-border { border: #FFFFE0; }
+.dark-yellow-border { border: #808000; }
+
+.orange-border { border: #FFA500; }
+.light-orange-border { border: #FFD700; }
+.dark-orange-border { border: #FF8C00; }
+
+.purple-border { border: #800080; }
+.light-purple-border { border: #C7B8EA; }
+.dark-purple-border { border: #3B0B3B; }
+
+.pink-border { border: #FFC0CB; }
+.light-pink-border { border: #FFB6C1; }
+.dark-pink-border { border: #E5A9BC; }
+
+.brown-border { border: #A52A2A; }
+.light-brown-border { border: #964B00; }
+.dark-brown-border { border: #452B1F; }
+
+.grey-border { border: #808080; }
+.light-grey-border { border: #C0C0C0; }
+.dark-grey-border { border: #333333; }
+
+.black-border { border: #000000; }
+.white-border { border: #FFFFFF; }
+
+.teal-border { border: #0097FF;}
+.lime-border { border: #32CD32;}
+.coral-border { border: #FFC67D;}
+.fuchsia-border { border: #FF00FF;}
+.amber-border { border: #FFC080;}
+.indigo-border { border: #4B0082;}
+.beige-border { border: #F5F5DC;}
+
+.gold-border { border: #FFD700; }
+.silver-border { border: #B1B1B1; }
+.bronze-border { border: #CD7F32; }
+.copper-border { border: #B2875F; }
+.brass-border { border: #CFD4D5; }
+.chromium-border { border: #003333; }
+.titanium-border{ border: #7F7F90; }
+
+/*********************************/
+/*   HOVER BG COLOR start here   */
+/*********************************/
+
+.blue-bg-hover:hover { background-color: #0000FF; }
+.light-blue-bg-hover:hover { background-color: #add8e6; }
+.dark-blue-bg-hover:hover { background-color: #00008b; }
+
+.red-bg-hover:hover { background-color: #FF0000; }
+.light-red-bg-hover:hover { background-color: #FFC0CB; }
+.dark-red-bg-hover:hover { background-color: #8B0000; }
+
+.green-bg-hover:hover { background-color: #008000; }
+.light-green-bg-hover:hover { background-color: #C6E2B5; }
+.dark-green-bg-hover:hover { background-color: #003300; }
+
+.yellow-bg-hover:hover { background-color: #FFFF00; }
+.light-yellow-bg-hover:hover { background-color: #FFFFE0; }
+.dark-yellow-bg-hover:hover { background-color: #808000; }
+
+.orange-bg-hover:hover { background-color: #FFA500; }
+.light-orange-bg-hover:hover { background-color: #FFD700; }
+.dark-orange-bg-hover:hover { background-color: #FF8C00; }
+
+.purple-bg-hover:hover { background-color: #800080; }
+.light-purple-bg-hover:hover { background-color: #C7B8EA; }
+.dark-purple-bg-hover:hover { background-color: #3B0B3B; }
+
+.pink-bg-hover:hover { background-color: #FFC0CB; }
+.light-pink-bg-hover:hover { background-color: #FFB6C1; }
+.dark-pink-bg-hover:hover { background-color: #E5A9BC; }
+
+.brown-bg-hover:hover { background-color: #A52A2A; }
+.light-brown-bg-hover:hover { background-color: #964B00; }
+.dark-brown-bg-hover:hover { background-color: #452B1F; }
+
+.grey-bg-hover:hover { background-color: #808080; }
+.light-grey-bg-hover:hover { background-color: #C0C0C0; }
+.dark-grey-bg-hover:hover { background-color: #333333; }
+
+.black-bg-hover:hover { background-color: #000000; }
+.white-bg-hover:hover { background-color: #FFFFFF; }
+
+.teal-bg-hover:hover { background-color: #0097FF; }
+.lime-bg-hover:hover { background-color: #32CD32; }
+.coral-bg-hover:hover { background-color: #FFC67D; }
+.fuchsia-bg-hover:hover { background-color: #FF00FF; }
+.amber-bg-hover:hover { background-color: #FFC080; }
+.indigo-bg-hover:hover { background-color: #4B0082; }
+.beige-bg-hover:hover { background-color: #F5F5DC; }
+
+.gold-bg-hover:hover { background-color: #FFD700; }
+.silver-bg-hover:hover { background-color: #B1B1B1; }
+.bronze-bg-hover:hover { background-color: #CD7F32; }
+.copper-bg-hover:hover { background-color: #B2875F; }
+.brass-bg-hover:hover { background-color: #CFD4D5; }
+.chromium-bg-hover:hover { background-color: #003333; }
+.titanium-bg-hover:hover { background-color: #7F7F90; }
+
+/***********************************/
+/*   HOVER TEXT COLOR start here   */
+/***********************************/
+
+.blue-txt-hover:hover { color: #0000FF; }
+.light-blue-txt-hover:hover { color: #add8e6; }
+.dark-blue-txt-hover:hover { color: #00008b; }
+
+.red-txt-hover:hover { color: #FF0000; }
+.light-red-txt-hover:hover { color: #FFC0CB; }
+.dark-red-txt-hover:hover { color: #8B0000; }
+
+.green-txt-hover:hover { color: #008000; }
+.light-green-txt-hover:hover { color: #C6E2B5; }
+.dark-green-txt-hover:hover { color: #003300; }
+
+.yellow-txt-hover:hover { color: #FFFF00; }
+.light-yellow-txt-hover:hover { color: #FFFFE0; }
+.dark-yellow-txt-hover:hover { color: #808000; }
+
+.orange-txt-hover:hover { color: #FFA500; }
+.light-orange-txt-hover:hover { color: #FFD700; }
+.dark-orange-txt-hover:hover { color: #FF8C00; }
+
+.purple-txt-hover:hover { color: #800080; }
+.light-purple-txt-hover:hover { color: #C7B8EA; }
+.dark-purple-txt-hover:hover { color: #3B0B3B; }
+
+.pink-txt-hover:hover { color: #FFC0CB; }
+.light-pink-txt-hover:hover { color: #FFB6C1; }
+.dark-pink-txt-hover:hover { color: #E5A9BC; }
+
+.brown-txt-hover:hover { color: #A52A2A; }
+.light-brown-txt-hover:hover { color: #964B00; }
+.dark-brown-txt-hover:hover { color: #452B1F; }
+
+.grey-txt-hover:hover { color: #808080; }
+.light-grey-txt-hover:hover { color: #C0C0C0; }
+.dark-grey-txt-hover:hover { color: #333333; }
+
+.black-txt-hover:hover { color: #000000; }
+.white-txt-hover:hover { color: #FFFFFF; }
+
+.teal-txt-hover:hover { color: #0097FF;}
+.lime-txt-hover:hover { color: #32CD32;}
+.coral-txt-hover:hover { color: #FFC67D;}
+.fuchsia-txt-hover:hover { color: #FF00FF;}
+.amber-txt-hover:hover { color: #FFC080;}
+.indigo-txt-hover:hover { color: #4B0082;}
+.beige-txt-hover:hover { color: #F5F5DC;}
+
+.gold-txt-hover:hover { color: #FFD700; }
+.silver-txt-hover:hover { color: #B1B1B1; }
+.bronze-txt-hover:hover { color: #CD7F32; }
+.copper-txt-hover:hover { color: #B2875F; }
+.brass-txt-hover:hover { color: #CFD4D5; }
+.chromium-txt-hover:hover { color: #003333; }
+.titanium-txt-hover:hover{ color: #7F7F90; }
+
+/*************************/
+/*   HEIGHT start here   */
+/*************************/
+.pad-top-10 {
+padding-top: 10px;
+}
+
+.pad-top-min-20{
+    margin-top: -20rem;
+}
+
+/*************************/
+/*   HEIGHT start here   */
+/*************************/
+
+
+
+/*************************/
+/*   HEIGHT start here   */
+/*************************/
+
+
+
+
+/*************************/
+/*   HEIGHT start here   */
+/*************************/
+.h70{
+    height: 70px;
+}
+
+
+.w70{
+    width: 70px;
+}
+
+.w100{
+    width: 100px;
+}
+
+.icons16 {
+    justify-content: center; /* center the items horizontally within the container */
+    align-items: center; /*  items will be centered vertically */
+    border-radius: 50%;
+    height: 16px;
+    width: 165px;
+}
+  
+.check {
+    justify-content: center;
+    align-items: center;
+    filter: invert(50%) sepia(70%) saturate(6000%) hue-rotate(72deg) brightness(90%) contrast(80%);
+}
+
+.x {
+    justify-content: center;
+    align-items: center;
+    filter: invert(74%) sepia(67%) saturate(4223%) hue-rotate(336deg) brightness(88%) contrast(86%);  
+}
+
+.size20{
+    width: 20px;
+    height: 20px;
+}
+  
+.button {
+    padding: 10px 20px; /* Add some padding to make the button bigger */
+    border-radius: 5px; /* Add a rounded corner effect */
+    cursor: pointer; /* Change the cursor icon to a pointing hand */
+}
+
+.button:active {
+    transform: translateY(4px); /* Add a slight animation effect on click */
+}
+
+.border{
+    border: 1px;
+}
+
+.bold{font-weight: bold;}

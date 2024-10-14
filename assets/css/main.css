@@ -116,37 +116,6 @@ input, select, textarea {
 			border-color: transparent;
 		}
 
-/* Icon */
-
-	.icon {
-		text-decoration: none;
-		position: relative;
-	}
-
-		.icon:before {
-			-moz-osx-font-smoothing: grayscale;
-			-webkit-font-smoothing: antialiased;
-			display: inline-block;
-			font-style: normal;
-			font-variant: normal;
-			text-rendering: auto;
-			line-height: 1;
-			text-transform: none !important;
-			font-family: 'Font Awesome 5 Free';
-			font-weight: 400;
-		}
-
-		.icon > .label {
-			display: none;
-		}
-
-		.icon.solid:before {
-			font-weight: 900;
-		}
-
-		.icon.brands:before {
-			font-family: 'Font Awesome 5 Brands';
-		}
 
 /* Wrapper */
 
@@ -790,16 +759,16 @@ input, select, textarea {
 			}
 
 			100% {
-				-moz-transform: translate3d(-1500px,0,0);
-				-webkit-transform: translate3d(-1500px,0,0);
-				-ms-transform: translate3d(-1500px,0,0);
-				transform: translate3d(-1500px,0,0);
+				-moz-transform: translate3d(-200vh,0,0);
+				-webkit-transform: translate3d(-200vh,0,0);
+				-ms-transform: translate3d(-200vh,0,0);
+				transform: translate3d(-200vh,0,0);
 			}
 		}
 
 		#bg {
-			background-size: 1500px auto;
-			width: 4500px;
+			background-size: 200vh auto;
+			width: 2000vw;
 		} }
 
 /* Normal */
@@ -862,27 +831,7 @@ input, select, textarea {
 				transform: translate3d(-750px,0,0);
 			}
 		}
-
-		@keyframes bg {
-			0% {
-				-moz-transform: translate3d(0,0,0);
-				-webkit-transform: translate3d(0,0,0);
-				-ms-transform: translate3d(0,0,0);
-				transform: translate3d(0,0,0);
-			}
-
-			100% {
-				-moz-transform: translate3d(-750px,0,0);
-				-webkit-transform: translate3d(-750px,0,0);
-				-ms-transform: translate3d(-750px,0,0);
-				transform: translate3d(-750px,0,0);
-			}
-		}
-
-		#bg {
-			background-size: 750px auto;
-			width: 2250px;
-		} }
+ }
 
 /* Mobile */
 
@@ -949,26 +898,7 @@ input, select, textarea {
 			}
 		}
 
-		@keyframes bg {
-			0% {
-				-moz-transform: translate3d(0,0,0);
-				-webkit-transform: translate3d(0,0,0);
-				-ms-transform: translate3d(0,0,0);
-				transform: translate3d(0,0,0);
-			}
-
-			100% {
-				-moz-transform: translate3d(-300px,0,0);
-				-webkit-transform: translate3d(-300px,0,0);
-				-ms-transform: translate3d(-300px,0,0);
-				transform: translate3d(-300px,0,0);
-			}
-		}
-
-		#bg {
-			background-size: 300px auto;
-			width: 900px;
-		}
+		
 
 	/* Header */
 
@@ -1047,26 +977,7 @@ input, select, textarea {
 			}
 		}
 
-		@keyframes bg {
-			0% {
-				-moz-transform: translate3d(0,0,0);
-				-webkit-transform: translate3d(0,0,0);
-				-ms-transform: translate3d(0,0,0);
-				transform: translate3d(0,0,0);
-			}
-
-			100% {
-				-moz-transform: translate3d(-412.5px,0,0);
-				-webkit-transform: translate3d(-412.5px,0,0);
-				-ms-transform: translate3d(-412.5px,0,0);
-				transform: translate3d(-412.5px,0,0);
-			}
-		}
-
-		#bg {
-			background-size: 412.5px auto;
-			width: 1237.5px;
-		}
+		
 
 	/* Header */
 
@@ -1074,22 +985,24 @@ input, select, textarea {
 			padding: 0 1em;
 		} }
 
-	.icon-circle {
+	.line-group{
 		display: inline-flex;
-		justify-content: center;
-		align-items: center;
-		width: 75px; /* Adjust size as needed */
-		height: 75px; /* Adjust size as needed */
-		border-radius: 80%;
-		background-color: transparent; /* Background color */
-		border: 1px solid #ffffff; /* Border color */
-		overflow: hidden; /* Ensure overflow is hidden */
-    	transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
-		display: block; /* Ensure the SVG is treated as a block element */	
+		gap: 1rem;
+		margin-top: 2rem;
 	}
-	.icon-circle:hover {
-		background-color: rgba(210, 210, 210, 0.35); /* Background color on hover */
+
+	.icons1{
+		padding-top: 0.5rem;
+		justify-content: center;
+		justify-items: center;
+	}
+
+	.icons1:hover {
+		background-color: rgba(210, 210, 210, 0.25); /* Background color on hover */
 		transform: scale(1.1); /* Scale up the circle on hover */
 		}
-
+	
+		.bi-github, .bi-envelope-fill {
+			font-size: 24px;
+		}
 		
