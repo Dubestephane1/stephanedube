@@ -16,27 +16,43 @@
     
 		<!-- ADD -->
 		<!-- Background image in CSS, line 229 -->
-		<script>
-			document.addEventListener("DOMContentLoaded", function() {
-				const loadHTML = (elementId, file) => {
-					fetch(file)
-						.then(response => {
-							if (!response.ok) {
-								throw new Error('Network response was not ok');
-							}
-							return response.text();
-						})
-						.then(data => {
-							document.getElementById(elementId).innerHTML = data;
-						})
-						.catch(error => console.error('There was a problem with the fetch operation:', error));
-				};
-				loadHTML("Name", "Name.html");
-				loadHTML("Lines", "Lines.html");
-				loadHTML("IconLine", "IconLine.html");
-				loadHTML("Footer", "Footer.html");
-			});
-		</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+ const loadHTML = (elementId, file) => {
+            return fetch(file)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    document.getElementById(elementId).innerHTML = data;
+                })
+                .catch(error => {
+                    console.error('There was a problem with the fetch operation:', error);
+                    // Add error handling here, e.g. display an error message to the user
+                });
+        };
+
+        // Keep track of the number of fetch operations that have completed
+        let fetchCount = 0;
+        const totalFetches = 4;
+
+        const onComplete = () => {
+            fetchCount++;
+            if (fetchCount === totalFetches) {
+                // All fetch operations have completed, remove the is-preload class
+                document.body.classList.remove('is-preload');
+            }
+        };
+
+        loadHTML("Name", "Name.html").then(onComplete).catch(onComplete);
+        loadHTML("Lines", "Lines.html").then(onComplete).catch(onComplete);
+        loadHTML("IconLine", "IconLine.html").then(onComplete).catch(onComplete);
+        loadHTML("Footer", "Footer.html").then(onComplete).catch(onComplete);
+    });
+</script>
 		<!-- END ADD -->
 	</head>
 	<body class="is-preload">
