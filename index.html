@@ -1,79 +1,165 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<title>Stephane Dube - Programmer and Web Designer</title>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="keywords" content="web develper, web designer, Stephane Dube, AI, Python and programming">
-		<meta name="description" content="This is Stephane Dube website, a web developer, Python programmer, AI fanatic and designer. It showcases his work, skills and contact information.">
-		<link rel="stylesheet" href="assets/css/main.css">
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css"></noscript>
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-		<link rel="stylesheet" href="assets/css/ani.css">
-		<link rel="stylesheet" href="assets/css/odinstyle.css">
-		<link rel="icon" type="image/icon" href="assets/css/images/odinicon.png">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
-		<!-- ADD -->
-		<!-- Background image in CSS, line 229 -->
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
- const loadHTML = (elementId, file) => {
-            return fetch(file)
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok');
-                    }
-                    return response.text();
-                })
-                .then(data => {
-                    document.getElementById(elementId).innerHTML = data;
-                })
-                .catch(error => {
-                    console.error('There was a problem with the fetch operation:', error);
-                    // Add error handling here, e.g. display an error message to the user
-                });
-        };
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Stephane Dube - Developer, Python programmer, and AI enthusiast. Explore my projects in web development, LLM, artificial Intelligence and responsive design." />
+  <meta name="keywords" content="Python developer, AI programmer, web developer, Stephane Dube, LLM, AI, web design" />
+  <meta property="og:title" content="Stephane Dube - Developer & AI Builder" />
+  <meta property="og:description" content="Building intelligent web apps with Python and AI." />
+  <meta property="og:image" content="https://stephanedube.odinforge.space/images/preview.jpg" />
+  <meta property="og:url" content="https://stephanedube.odinforge.space" />
 
-        // Keep track of the number of fetch operations that have completed
-        let fetchCount = 0;
-        const totalFetches = 4;
+  <title>Stephane Dube - Programmer & Web Designer</title>
 
-        const onComplete = () => {
-            fetchCount++;
-            if (fetchCount === totalFetches) {
-                // All fetch operations have completed, remove the is-preload class
-                document.body.classList.remove('is-preload');
-            }
-        };
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-        loadHTML("Name", "Name.html").then(onComplete).catch(onComplete);
-        loadHTML("Lines", "Lines.html").then(onComplete).catch(onComplete);
-        loadHTML("IconLine", "IconLine.html").then(onComplete).catch(onComplete);
-        loadHTML("Footer", "Footer.html").then(onComplete).catch(onComplete);
-    });
-</script>
-		<!-- END ADD -->
-	</head>
-	<body class="is-preload">
-		<div id="wrapper">
-			<div id="bg"></div>
-			<div id="overlay"></div>
-			<div id="main">
-				<!-- Header -->
-					<header id="header">
-						<div id="Name"></div>
-						<div id="Lines"></div>
-						<div id="IconLine"></div>
-					</header>
-				<!-- Footer -->
-					<div id="Footer"></div>
-			</div>
-		</div>
-		<script>
-			window.onload = function() { document.body.classList.remove('is-preload'); }
-			window.ontouchmove = function() { return false; }
-			window.onorientationchange = function() { document.body.scrollTop(0,0); }
-		</script>
-	</body>
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/miniai.css">
+
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="#home" class="nav-logo">Stephane Dube</a>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header id="home" class="video-header">
+    <video autoplay muted loop id="background-video">
+      <source src="assets/loop.mp4" type="video/mp4">
+    </video>
+    <div class="container">
+      <h1>Stephane Dube</h1>
+      <p class="tagline">Developer • Python & AI Specialist • Web Designer</p>
+      <p>I build intelligent, responsive web applications using modern tools and machine learning.</p>
+      <div class="actions">
+        <a href="#projects">View My Work</a>
+        <a href="#contact" class="secondary">Contact Me</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- About -->
+  <section id="about" class="fade-in-section">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-content">
+        <div class="about-image">
+          <img src="assets/stephane.jpg" alt="Stephane Dube">
+        </div>
+        <div class="about-text">
+          <p>Hello! I'm Stephane, a passionate Canadian developer and AI enthusiast based in Southeast Asia, specializing in Python, web development, and integrating AI into practical applications.</p>
+          <p>With a strong foundation in both design and programming, I create clean, performant, and user-friendly experiences from dynamic websites to AI-powered tools.</p>
+          <div class="skills-container">
+            <div class="skill-badge"><i class="fab fa-python"></i> Python</div>
+            <div class="skill-badge"><i class="fab fa-html5"></i> HTML</div>
+            <div class="skill-badge"><i class="fa-brands fa-php"></i> PHP</div>
+            <div class="skill-badge"><i class="fab fa-js-square"></i> JavaScript</div>
+            <div class="skill-badge"><i class="fa-solid fa-square-binary"></i> L.L.M.</div>
+            <div class="skill-badge"><i class="fa-solid fa-code-branch"></i> N8N</div>
+            <div class="skill-badge"><i class="fa-brands fa-css3-alt"></i> CSS</div>
+            <div class="skill-badge"><i class="fa-brands fa-cloudflare"></i> CloudFlare</div>
+            <div class="skill-badge"><i class="fa-brands fa-docker"></i> Docker</div>
+            <div class="skill-badge"><i class="fab fa-git-alt"></i> GitHub</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="fade-in-section">
+    <div class="container">
+      <h2>Featured Projects</h2>
+      <div class="projects-grid">
+        
+        <!-- Project 1 -->
+        <div class="project-card">
+          <h3>Notion Clone with AI Chatbot</h3>
+          <div class="tech-stack">Firebase • HTML • CSS • Javascript</div>
+          <p>This is a simplified version of the Notion app, integrated into a web interface with real-time A.I. responses.</p>
+          <a href="https://notion.odinforge.space" target="_blank"><i class="fa-solid fa-code"></i> Inspect Code</a>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card">
+          <h3>Portfolio Website with OdinForge</h3>
+          <div class="tech-stack">HTML • CSS • JavaScript • Cloudflare • Python</div>
+          <p>My personal website features apps I coded, including a Pomodoro timer, Tic Tac Toe, Abacus, Tetris, and a Notion-inspired app.</p>
+          <a href="https://github.com/Dubestephane1" target="_blank"><i class="fab fa-github"></i> View Code</a>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card">
+          <h3>Harvard CS50 certificates </h3>
+          <div class="tech-stack">Artificial Intelligence • Programming with Python</div>
+          <p>Explores the concepts and algorithms at the foundation of modern a.i. diving into game-playing engines.</p>
+          <a href="https://pll.harvard.edu/course/cs50s-introduction-artificial-intelligence-python" target="_blank"><i class="fa-solid fa-link"></i> View Course</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="fade-in-section">
+    <div class="container">
+      <h2>Get In Touch</h2>
+      <p>I am currently working remotely for <i class="fa-solid fa-circle-stop"></i> Invisible Technologies (San Francisco) as an AI Agent Operator.</p>
+      <p>I'm always open to new opportunities and collaborations.</p>
+      <p>Email: <a href="mailto:website@odinforge.space">website@odinforge.space</a></p>
+      <div class="social-links">
+        <a href="https://github.com/Dubestephane1" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/dubestephane/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://x.com/StephanOdinDube" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Stephane Dube. Built with ❤️ by <a href="https://odinforge.space" target="_blank"><img src="assets/odinicon.png" alt="Odin Forge Logo"> Odin.</a></p>
+  </footer>
+
+  <!-- Chatbot -->
+  <div class="chatbot-container">
+    <div class="chat-icon">
+      <i class="fas fa-comment-dots"></i>
+    </div>
+    <div class="chat-window">
+      <div class="chat-header">
+        <h3>Chatbot Assistant</h3>
+        <button class="close-chat"><i class="fa-solid fa-x"></i></button>
+      </div>
+      <div class="chat-body">
+        <div class="chat-messages">
+          <div class="message bot-message">
+            <p>How can I help you today?</p>
+          </div>
+        </div>
+      </div>
+      <div class="chat-footer">
+        <input type="text" id="chatInput" placeholder="Type a message...">
+        <button id="sendMessage">Send</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll Animation Script -->
+  <script src="js/script.js"></script>
+    <script src="js/miniai.js"></script>
+  <!-- Optional: Cloudflare Web Analytics -->
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "4eb0c241d7764285863bcd15f98bbfcb"}'></script>
+
+</body>
 </html>
