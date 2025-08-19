@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #0a0a0f;
+  color: #e0e0ff;
+  font-family: 'Orbitron', sans-serif;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.container {
+  position: relative;
+  z-index: 10;
+  padding: 2rem;
+}
+
+h1 {
+  font-size: 5rem;
+  margin: 0;
+  color: #7b68ee;
+  text-shadow: 0 0 10px rgba(123, 104, 238, 0.7);
+  letter-spacing: 2px;
+}
+
+p {
+  font-size: 1.3rem;
+  margin: 1rem 0 2rem;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+a {
+  color: #a879ff;
+  text-decoration: none;
+  border-bottom: 1px solid #5a3daa;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: #d0b3ff;
+  border-color: #a879ff;
+}
+
+.glitch {
+  position: relative;
+  animation: glitch 2s infinite;
+}
+
+@keyframes glitch {
+  0% { transform: translate(0); }
+  20% { transform: translate(-5px, 5px); }
+  40% { transform: translate(5px, -5px); }
+  60% { transform: translate(-5px, -5px); }
+  80% { transform: translate(5px, 5px); }
+  100% { transform: translate(0); }
+}
+
+.scanline {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    transparent 10%,
+    rgba(0, 0, 0, 0.2) 10.5%,
+    transparent 11%
+  );
+  background-size: 100% 20px;
+  animation: scanline 8s linear infinite;
+  z-index: 5;
+  opacity: 0.3;
+}
+
+@keyframes scanline {
+  0% { background-position: 0 0; }
+  100% { background-position: 0 100%; }
+}
+
+.particles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0; left: 0;
+  z-index: 1;
+}
+
+.particle {
+  position: absolute;
+  background: #7b68ee;
+  border-radius: 50%;
+  opacity: 0.3;
+  pointer-events: none;
+  animation: float 6s infinite ease-in-out;
+}
+
+@keyframes float {
+  0% { transform: translateY(0) rotate(0deg); opacity: 0.3; }
+  50% { opacity: 0.7; }
+  100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
+}
+
+.btn {
+  background: transparent;
+  color: #a879ff;
+  border: 1px solid #a879ff;
+  padding: 0.8rem 1.5rem;
+  font-family: 'Orbitron', sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+}
+
+.btn:hover {
+  background: rgba(168, 121, 255, 0.1);
+  box-shadow: 0 0 15px rgba(168, 121, 255, 0.5);
+}
+
+img {
+    height: 4vh; /* Adjusts image height to match text size (adjust as needed) */
+    vertical-align: middle; /* Fine-tunes vertical alignment with text */
+    padding-bottom: 0.2rem;
+    }
