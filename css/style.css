@@ -603,6 +603,7 @@ footer img {
     max-width: 350px;
     bottom: 70px;
   }
+<<<<<<< HEAD
 
   .chat-footer {
     padding: 0.75rem;
@@ -619,4 +620,6 @@ footer img {
     font-size: 0.9rem;
     flex-shrink: 0; /* Prevents button from being squashed */
   }
+=======
+>>>>>>> 1d30c7bd1eb88f18c308acf9e2847509869fb2ea
 }
