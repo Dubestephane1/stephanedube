@@ -6,28 +6,34 @@ document.addEventListener('DOMContentLoaded', function() {
     const userQuestionInput = document.getElementById('chatInput');
     const responseArea = document.querySelector('.chat-messages');
 
-    chatIcon.addEventListener('click', () => {
-        chatWindow.classList.toggle('open');
-    });
+    if (chatIcon && chatWindow) {
+        chatIcon.addEventListener('click', () => {
+            chatWindow.classList.toggle('open');
+        });
+    }
 
-    closeChat.addEventListener('click', () => {
-        chatWindow.classList.remove('open');
-    });
+    if (closeChat && chatWindow) {
+        closeChat.addEventListener('click', () => {
+            chatWindow.classList.remove('open');
+        });
+    }
 
-    askButton.addEventListener('click', function() {
-        const question = userQuestionInput.value.trim();
-        if (question) {
-            addMessage(question, 'user');
-            getResponse(question);
-            userQuestionInput.value = ''; // Clear the input field
-        }
-    });
+    if (askButton && userQuestionInput) {
+        askButton.addEventListener('click', function() {
+            const question = userQuestionInput.value.trim();
+            if (question) {
+                addMessage(question, 'user');
+                getResponse(question);
+                userQuestionInput.value = ''; // Clear the input field
+            }
+        });
 
-    userQuestionInput.addEventListener('keypress', function(event) {
-        if (event.key === 'Enter') {
-            askButton.click();
-        }
-    });
+        userQuestionInput.addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                askButton.click();
+            }
+        });
+    }
 
     function addMessage(text, sender) {
         const messageDiv = document.createElement('div');
