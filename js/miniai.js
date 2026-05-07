@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const chatIcon = document.querySelector('.chat-icon');
     const chatWindow = document.querySelector('.chat-window');
     const closeChat = document.querySelector('.close-chat');
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     if (askButton && userQuestionInput) {
-        askButton.addEventListener('click', function() {
+        askButton.addEventListener('click', function () {
             const question = userQuestionInput.value.trim();
             if (question) {
                 addMessage(question, 'user');
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
 
-        userQuestionInput.addEventListener('keypress', function(event) {
+        userQuestionInput.addEventListener('keypress', function (event) {
             if (event.key === 'Enter') {
                 askButton.click();
             }
@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         // Questions about Contact
         else if (question.includes("contact") || question.includes("get in touch") || question.includes("email")) {
-            response = "You can contact Stephane at website@odinforge.space or connect via GitHub (Dubestephane1), LinkedIn (dubestephane), or X (@StephanOdinDube).";
+            response = "You can contact Stephane at dubestephane@proton.me or connect via GitHub (Dubestephane1), LinkedIn (dubestephane), or X (@StephanOdinDube).";
         }
         // Questions about Who are you
         else if (question.includes("who are you")) {
