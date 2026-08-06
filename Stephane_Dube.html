@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stephane Dube – Resume</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: "Segoe UI", -apple-system, Roboto, Arial, sans-serif;
+            color: #1a1a2e;
+            background: #ffffff;
+            line-height: 1.5;
+            padding: 40px 20px;
+        }
+
+        .page {
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 40px 48px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 14px rgba(0,0,0,0.08);
+        }
+
+        header.centered { text-align: center; padding-bottom: 20px; border-bottom: 3px solid #0f3460; }
+        h1 { font-size: 30px; letter-spacing: 1px; color: #0f3460; }
+        .title-role { font-size: 15px; color: #1557b0; font-weight: 600; margin-top: 2px; }
+        .contact { font-size: 12.5px; color: #444; margin-top: 12px; line-height: 1.8; }
+        .contact a { color: #1557b0; text-decoration: none; }
+        .contact a:hover { text-decoration: underline; }
+        .contact .divider { margin: 0 5px; color: #999; }
+
+        h2 {
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            color: #0f3460;
+            margin: 24px 0 10px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        p { font-size: 13px; color: #333; }
+
+        ul { list-style: none; margin: 6px 0; }
+        ul li { font-size: 13px; color: #333; margin: 5px 0 5px 14px; position: relative; line-height: 1.55; }
+        ul li::before { content: "▸"; position: absolute; left: -14px; color: #1557b0; }
+
+        .skill { margin-bottom: 8px; }
+        .skill strong { color: #0f3460; }
+        .skill span { color: #333; }
+
+        .job { margin-bottom: 20px; }
+        .job-header { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; }
+        .job-title { font-size: 14.5px; font-weight: 700; color: #1a1a2e; }
+        .job-company { font-size: 13px; font-weight: 600; color: #1557b0; }
+        .job-meta { font-size: 12px; color: #777; }
+        .job-dates { font-size: 12.5px; color: #666; font-weight: 600; white-space: nowrap; }
+
+        .edu { font-size: 13px; color: #333; margin: 5px 0; }
+        .edu strong { color: #0f3460; }
+        .skilllist { list-style: none; }
+
+        @media print {
+            body { padding: 0; }
+            .page { box-shadow: none; border-radius: 0; }
+            h2 { break-after: avoid; }
+            .job { break-inside: avoid; }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <header class="centered">
+            <h1>STÉPHANE DUBE</h1>
+            <div class="title-role">AI Agent Specialist &amp; Full-Stack Developer</div>
+            <div class="contact">
+                dubestephane@protonmail.com <span class="divider">|</span> +66 80-146-0954 <span class="divider">|</span> South-East Asia (Canadian Nomad)<br />
+                <a href="https://odinforge.pages.dev">Portfolio</a> <span class="divider">|</span>
+                <a href="https://stephanedube.pages.dev/">Website</a> <span class="divider">|</span>
+                <a href="https://github.com/Dubestephane1">GitHub</a> <span class="divider">|</span>
+                <a href="https://www.linkedin.com/in/dubestephane/">LinkedIn</a>
+            </div>
+        </header>
+
+        <section>
+            <h2>Professional Summary</h2>
+            <p>AI Agent Specialist and Full-Stack Developer with deep expertise in Supervised Fine-Tuning (SFT), Reinforcement Learning from Human Feedback (RLHF), and the practical deployment of AI agents for real-world automation. Over 10 years of hands-on experience in web development, automation, and digital marketing, now specializing in building and optimizing production-grade AI systems. Combines strong engineering fundamentals with the ability to generate high-quality training data, evaluate model outputs, and ship AI agents that integrate into business workflows. Fluent in English and French.</p>
+        </section>
+
+        <section>
+            <h2>Core Skills</h2>
+            <div class="skill"><strong>AI &amp; AI Agents:</strong> <span>SFT, RLHF, LLM Fine-tuning, Prompt Engineering, AI Agent Orchestration, Agentic Workflows, Human-in-the-Loop Evaluation, Local LLM Deployment (Ollama, Open WebUI)</span></div>
+            <div class="skill"><strong>Programming:</strong> <span>Python, JavaScript, PHP, MySQL, PineScript, HTML5, CSS3</span></div>
+            <div class="skill"><strong>AI Tools &amp; Platforms:</strong> <span>Gemini Agents, Gemini CLI, n8n Automation, Open WebUI</span></div>
+            <div class="skill"><strong>Web Development:</strong> <span>Responsive Design, Tailwind CSS, Bootstrap, WordPress</span></div>
+            <div class="skill"><strong>Automation &amp; Data:</strong> <span>Web Scraping, API Integration, Data Pipelines, Analytics Reporting (Google Analytics)</span></div>
+            <div class="skill"><strong>Languages:</strong> <span>English (Fluent), French (Fluent)</span></div>
+        </section>
+
+        <section>
+            <h2>Professional Experience</h2>
+
+            <div class="job">
+                <div class="job-header">
+                    <span class="job-title">AI Agent Operator (Freelance)</span>
+                    <span class="job-dates">May 2025 – Present</span>
+                </div>
+                <div class="job-company">Invisible Technologies</div>
+                <ul>
+                    <li>Conduct Supervised Fine-Tuning (SFT) by creating high-quality, instruction-aligned training data for advanced LLMs.</li>
+                    <li>Perform Reinforcement Learning from Human Feedback (RLHF) through output ranking, preference labeling, and model behavior optimization.</li>
+                    <li>Execute complex, time-sensitive remote workflows with 100% accuracy while maintaining detailed performance logs.</li>
+                    <li>Evaluate and refine LLM responses against strict technical specifications to improve reasoning and instruction-following capabilities for a leading AI provider.</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <span class="job-title">AI Developer &amp; Full-Stack Engineer (Freelance / Founder)</span>
+                    <span class="job-dates">January 2015 – Present</span>
+                </div>
+                <div class="job-company">OdinForge Projects</div>
+                <ul>
+                    <li>Designed and shipped MapleMind, a private local AI document intelligence platform for real estate and professional firms, indexing contracts and policies for instant natural-language retrieval.</li>
+                    <li>Built Agent Evidence, an independent AI agent safety and governance review service delivering structured risk reports with file:line evidence.</li>
+                    <li>Developed Odin, a custom AI agent in Python handling multi-step reasoning, tool use, planning, and autonomous task execution with extensible memory.</li>
+                    <li>Architected LLM chat applications with streaming responses and clean, responsive user interfaces.</li>
+                    <li>Built automation workflows (n8n + Python) for content scheduling, analytics reporting, and AI-assisted content pipelines, reducing manual workload.</li>
+                    <li>Designed and deployed responsive websites using WordPress, PHP, MySQL, Tailwind CSS, and Bootstrap, improving client engagement metrics.</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <span class="job-title">Python &amp; English Second Language Tutor</span>
+                    <span class="job-dates">February 2021 – Present</span>
+                </div>
+                <div class="job-company">OMG Language Center, Chon Buri, Thailand</div>
+                <ul>
+                    <li>Taught Python and HTML to students, building foundational programming skills for automation and web development.</li>
+                    <li>Created engaging multimedia training materials, achieving a 90% student satisfaction rate.</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <span class="job-title">Digital Marketing &amp; Sales - Dive Instructor</span>
+                    <span class="job-dates">May 2018 – April 2020</span>
+                </div>
+                <div class="job-company">Dolphin Divers, Koh Chang, Thailand</div>
+                <ul>
+                    <li>Increased course enrollment by 12% through targeted social media campaigns on X (Twitter) and Google Ads.</li>
+                    <li>Graded and structured scuba education programs, improving customer satisfaction and retention.</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <span class="job-title">Automobile Sales Representative</span>
+                    <span class="job-dates">February 2004 – January 2014</span>
+                </div>
+                <div class="job-company">Mercedes-Benz Canada, Ford, Audi</div>
+                <ul>
+                    <li>Consistently ranked in the top 10% of sales performers across multiple premium brands.</li>
+                    <li>Awarded "Best Salesman" for four consecutive months in 2012.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Education &amp; Certifications</h2>
+            <p class="edu"><strong>Elements of AI Certificate</strong> - Helsinki University, 2025</p>
+            <p class="edu"><strong>CS50 Introduction to Artificial Intelligence</strong> - Harvard University, 2023</p>
+            <p class="edu"><strong>CS50 Programming with Python</strong> - Harvard University, 2022</p>
+            <p class="edu"><strong>Web Design and Programming</strong> - CEGEP Trois-Rivières, Canada, 2015</p>
+            <p class="edu"><strong>Google Skills Badges</strong> - 60+ badges (Gemini, AI Boost Bites, LLMs, etc.)</p>
+        </section>
+
+        <section>
+            <h2>Key Achievements</h2>
+            <ul>
+                <li>Successfully transitioned from web development and digital marketing into specialized AI model training (SFT &amp; RLHF) for global AI projects.</li>
+                <li>Built automated workflows combining Python scripting with AI agents (Gemini), dramatically improving operational efficiency.</li>
+                <li>Launched two productized AI services from concept to production, including marketing, pricing, and sales.</li>
+                <li>Achieved 100% accuracy on time-sensitive remote AI training workflows for a leading AI provider.</li>
+            </ul>
+        </section>
+    </div>
+</body>
+</html>
