@@ -13,6 +13,8 @@
   <title>Stephane Dube - Programmer & Web Designer</title>
 
   <link rel="icon" type="image/png" href="assets/odinicon.png">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
@@ -29,7 +31,7 @@
       <ul class="nav-links">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
+        <li><a href="https://www.skills.google/public_profiles/04a83f8f-3acf-40f5-9893-2fe1a235a5d3" target="_blank">Google Badge</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
@@ -42,10 +44,10 @@
     </video>
     <div class="container">
       <h1>Stephane Dube</h1>
-      <p class="tagline">Developer • Python & AI Specialist • Web Designer</p>
-      <p>I build intelligent, responsive web applications using modern tools and machine learning.</p>
+      <p class="tagline">Developer • Python & AI Agent • Automation</p>
+      <p>I build intelligent, responsive web applications using modern tools and AI Agent.</p>
       <div class="actions">
-        <a href="#projects">View My Work</a>
+        <a href="https://odinforge.pages.dev/" target="_blank">View My Work</a>
         <a href="#contact" class="secondary">Contact Me</a>
       </div>
     </div>
@@ -70,8 +72,8 @@
             <div class="skill-badge"><i class="fa-solid fa-square-binary"></i> L.L.M.</div>
             <div class="skill-badge"><i class="fa-solid fa-code-branch"></i> N8N</div>
             <div class="skill-badge"><i class="fa-brands fa-css3-alt"></i> CSS</div>
-            <div class="skill-badge"><i class="fa-brands fa-cloudflare"></i> CloudFlare</div>
-            <div class="skill-badge"><i class="fa-brands fa-docker"></i> Docker</div>
+            <div class="skill-badge"><i class="fa-solid fa-robot"></i> Agentic</div>
+            <div class="skill-badge"><i class="fa-solid fa-brain"></i> A.I.</div>
             <div class="skill-badge"><i class="fab fa-git-alt"></i> GitHub</div>
           </div>
         </div>
@@ -87,10 +89,10 @@
         
         <!-- Project 1 -->
         <div class="project-card">
-          <h3>Notion Clone with AI Chatbot</h3>
-          <div class="tech-stack">Firebase • HTML • CSS • Javascript</div>
-          <p>This is a simplified version of the Notion app, integrated into a web interface with real-time A.I. responses.</p>
-          <a href="https://notion.odinforge.space" target="_blank"><i class="fa-solid fa-code"></i> Inspect Code</a>
+          <h3>Autonomous AI Agent</h3>
+          <div class="tech-stack">Python • Agentic</div>
+          <p>Odin is a custom AI agent built from scratch in Python. Leverages LLM to handle multi-step reasoning, tool use, planning, and autonomous task execution. Designed for flexibility and control, can be extended with custom tools, memory, and workflows to solve complex problems.</p>
+          <a href="mailto:dubestephane@protonmail.com"><i class="fa-solid fa-envelope"></i> Ask me</a>
         </div>
 
         <!-- Project 2 -->
@@ -106,6 +108,7 @@
           <h3>Harvard CS50 certificates </h3>
           <div class="tech-stack">Artificial Intelligence • Programming with Python</div>
           <p>Explores the concepts and algorithms at the foundation of modern a.i. diving into game-playing engines.</p>
+          <img src="images/CS50AI.png" alt="CS50 AI Certificate" style="width:100%; border-radius:8px; margin-top:10px;">
           <a href="https://pll.harvard.edu/course/cs50s-introduction-artificial-intelligence-python" target="_blank"><i class="fa-solid fa-link"></i> View Course</a>
         </div>
       </div>
@@ -118,7 +121,7 @@
       <h2>Get In Touch</h2>
       <p>I am currently working remotely for <i class="fa-solid fa-circle-stop"></i> Invisible Technologies (San Francisco) as an AI Agent Operator.</p>
       <p>I'm always open to new opportunities and collaborations.</p>
-      <p>Email: <a href="mailto:website@odinforge.space">website@odinforge.space</a></p>
+      <p>Email: <a href="mailto:dubestephane@protonmail.com">dubestephane@protonmail.com</a></p>
       <div class="social-links">
         <a href="https://github.com/Dubestephane1" target="_blank" aria-label="GitHub Profile"><i class="fab fa-github"></i></a>
         <a href="https://www.linkedin.com/in/dubestephane/" target="_blank" aria-label="LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
@@ -129,7 +132,7 @@
 
   <!-- Footer -->
   <footer>
-    <p>© 2025 Stephane Dube. Built with ❤️ by <a href="https://odinforge.space" target="_blank" aria-label="Odin Forge Home"><img src="assets/odinicon.png" alt="Odin Forge Logo"> Odin.</a></p>
+    <p>© <span id="year"></span> Stephane Dube. Built with ❤️ by <a href="https://odinforge.pages.dev" target="_blank" aria-label="Odin Forge Home"><img src="assets/odinicon.png" alt="Odin Forge Logo"> Odin.</a></p>
   </footer>
 
   <!-- Chatbot -->
@@ -144,9 +147,7 @@
       </div>
       <div class="chat-body">
         <div class="chat-messages">
-          <div class="message bot-message">
-            <p>How can I help you today?</p>
-          </div>
+          <div class="message bot-message">How can I help you today?</div>
         </div>
       </div>
       <div class="chat-footer">
