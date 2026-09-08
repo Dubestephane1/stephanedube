@@ -9,7 +9,7 @@
   <meta property="og:title" content="Stephane Dube — AI Engineer & Full-Stack Developer" />
   <meta property="og:description" content="I build AI agents, data pipelines, and web apps that do real work. Remote-ready and currently open to new opportunities." />
   <meta property="og:image" content="assets/stephane.jpg" />
-  <meta property="og:url" content="https://stephanedube.odinforge.space" />
+  <meta property="og:url" content="https://stephanedube.pages.dev/" />
   <meta property="og:type" content="website" />
 
   <title>Stephane Dube — AI Engineer & Full-Stack Developer</title>
@@ -471,6 +471,7 @@ plan  = agent.plan(<span class="c-str">"task"</span>)
 
   <!-- AI Chatbot Assistant (demo of agentic work) -->
   <div class="chatbot-container">
+    <div class="chat-hint" id="chatHint"><i class="fa-solid fa-bolt"></i> Questions? Ask my AI assistant</div>
     <div class="chat-icon" id="chatIcon" aria-label="Open Chat">
       <i class="fas fa-comment-dots"></i>
     </div>
@@ -480,20 +481,21 @@ plan  = agent.plan(<span class="c-str">"task"</span>)
           <span class="chat-bot-avatar"><i class="fa-solid fa-robot"></i></span>
           <div>
             <h3>Odin Assistant</h3>
-            <span class="chat-sub">AI demo · built with JavaScript</span>
+            <span class="chat-sub">AI demo</span>
           </div>
         </div>
         <button class="close-chat" id="closeChat" aria-label="Close Chat"><i class="fa-solid fa-x"></i></button>
       </div>
       <div class="chat-body">
         <div class="chat-messages">
-          <div class="message bot-message">Hi! I'm Odin, Stephane's AI assistant. Ask me about his skills, experience, certifications, or how to hire him!</div>
+          <div class="message bot-message">Hello! I'm Odin, Stephane's AI assistant. Ask me about his AI experience, certifications, or how to hire him — or tap a suggestion below.</div>
         </div>
         <div class="chat-suggestions">
           <button class="suggestion" data-q="What are Stephane's skills?">Skills</button>
+          <button class="suggestion" data-q="What is his experience with AI?">AI Experience</button>
           <button class="suggestion" data-q="Tell me about his certifications">Certifications</button>
-          <button class="suggestion" data-q="What is Stephane's experience?">Experience</button>
-          <button class="suggestion" data-q="How can I hire Stephane?">Hire him</button>
+          <button class="suggestion" data-q="Is he available for work?">Availability</button>
+          <button class="suggestion" data-q="What are his rates?">Rates</button>
         </div>
       </div>
       <div class="chat-footer">

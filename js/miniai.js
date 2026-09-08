@@ -8,7 +8,7 @@
 class OdinAgent {
   constructor() {
     this.name = "Odin";
-    this.version = "2.0.0";
+    this.version = "2.1.0";
     this.knowledgeBase = {};
     this.interactionHistory = [];
     this.isInitialized = false;
@@ -50,6 +50,30 @@ class OdinAgent {
               tools: "Git/GitHub, Cloudflare Pages, n8n, WordPress, Bootstrap, Tailwind, Google Workspace AI, Docker/K8s (studying)",
               data: "Web scraping, API integration, data pipelines, analytics reporting (Google Analytics)"
             },
+            technologyAnswers: {
+              python: "Yes — Python is his core language. He builds AI agents, automation scripts, and data pipelines in it, and his Odin agent is written from scratch in Python.",
+              javascript: "Yes — JavaScript is a daily tool: vanilla ES6+, Node.js, and DOM work. This portfolio's chatbot itself runs on vanilla JavaScript.",
+              php: "Yes — PHP from his web development years, including WordPress client work.",
+              sql: "Yes — SQL/MySQL for web apps and data pipelines.",
+              mysql: "Yes — MySQL is his main database for web applications.",
+              html: "Yes — HTML5 is second nature after 10+ years of web development.",
+              html5: "Yes — HTML5 is second nature after 10+ years of web development.",
+              css: "Yes — CSS3 plus Tailwind and Bootstrap from a decade of front-end work.",
+              css3: "Yes — CSS3 plus Tailwind and Bootstrap from a decade of front-end work.",
+              flask: "Yes — he builds Flask APIs and completed IBM's 'Developing AI Applications with Python and Flask'.",
+              node: "Yes — Node.js for tooling and small services, alongside Python.",
+              git: "Yes — Git and GitHub on a daily basis: branching, pull requests, and CI.",
+              docker: "In progress — Docker and Kubernetes are part of his current IBM DevOps program.",
+              kubernetes: "In progress — Kubernetes and Docker are part of his current IBM DevOps program.",
+              n8n: "Yes — he uses n8n for workflow automation.",
+              wordpress: "Yes — WordPress from his client web development years.",
+              tailwind: "Yes — Tailwind CSS is part of his front-end stack.",
+              bootstrap: "Yes — Bootstrap is part of his front-end stack.",
+              ollama: "Yes — local LLM deployment with Ollama and Open WebUI is part of his AI tooling.",
+              typescript: "Not in his current stack — his front-end work is vanilla JS with Tailwind and Bootstrap.",
+              react: "Not in his current stack — his front-end work is vanilla JS with Tailwind and Bootstrap.",
+              django: "Not in his current stack — his Python web work focuses on Flask."
+            },
             projects: [
               { name: "Odin", desc: "A custom autonomous AI agent built from scratch in Python — multi-step reasoning, tool use, planning, and memory." },
               { name: "OdinForge", desc: "A collection of working apps built from scratch (Pomodoro, Tic Tac Toe, Abacus, Tetris, Notion-style app)." },
@@ -81,13 +105,14 @@ class OdinAgent {
             },
             resume: "Stephane_Dube.html",
             availability: "Open to new opportunities and collaborations — full-time, freelance, or contract, remote-first.",
-            hiring: "For hiring, the fastest path is email: dubestephane@protonmail.com. His résumé is one click away (the Resume button in the menu), and all verified badges are on Credly."
+            hiring: "For hiring, the fastest path is email: dubestephane@protonmail.com. His résumé is one click away (the Resume button in the menu), and all verified badges are on Credly.",
+            rates: "Rates are tailored to each project's scope — reach out at dubestephane@protonmail.com for a quote."
           },
           interactionPatterns: {
             greeting: [
-              "Hello! I'm Odin, Stephane's AI assistant. Ask me about his skills, experience, certifications, or how to hire him!",
-              "Hi there! I can tell you about Stephane, his AI work, or his projects. What would you like to know?",
-              "Hey! Stephane's assistant here. Try asking about his experience, certifications, or résumé."
+              "Hello! I'm Odin, Stephane's AI assistant. Ask me about his AI experience, certifications, projects, or how to hire him — I'll answer in seconds.",
+              "Hi there! I can tell you about Stephane's skills, rates, or availability. What would you like to know?",
+              "Hey! If you're recruiting, ask me about his experience, certifications, or how to reach him — or tap a suggestion below."
             ],
             thanks: [
               "You're very welcome! Anything else you'd like to know?",
@@ -108,8 +133,8 @@ class OdinAgent {
               "Goodbye! Explore the portfolio and don't hesitate to get in touch."
             ],
             help: [
-              "I can tell you about Stephane — his skills, experience, certifications, projects, and how to hire him. Try: 'What are his skills?', 'Tell me about his certifications', or 'How can I hire him?'",
-              "Ask me about Stephane's background, his IBM/Coursera certifications, projects, or contact details!"
+              "I help recruiters and visitors fast: his skills, AI experience, certifications, projects, availability, rates, and contact. Try 'Is he available for work?', 'What are his rates?', or 'Tell me about his certifications'.",
+              "Ask me about Stephane's background, his certifications, projects, or how to reach him — for example 'What is his experience with AI?'"
             ]
           }
         };
@@ -175,8 +200,12 @@ class OdinAgent {
       return this.describeExperience();
     }
 
+    // Specific technologies ("can you program in Python?")
+    const techAnswer = this.matchTechnology(q);
+    if (techAnswer) return techAnswer;
+
     // Skills
-    if (this.matchesAny(q, ['skill', 'expertise', 'technolog', 'stack', 'languages', 'language', 'tools', 'knows', 'what does he know', 'capable'])) {
+    if (this.matchesAny(q, ['skill', 'expertise', 'technolog', 'stack', 'languages', 'language', 'tools', 'knows', 'know', 'what does he know', 'capable', 'program', 'code', 'write'])) {
       return this.describeSkills();
     }
 
@@ -224,13 +253,28 @@ class OdinAgent {
   matchesAny(query, terms) {
     return terms.some(term => {
       const escaped = term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-      return new RegExp(`(^|[^a-z0-9])${escaped}(?=[^a-z0-9]|$)`, 'i').test(query);
+      // Prefix-tolerant: allow term continuations so "skills" matches "skill",
+      // "certifications" matches "certif", "coding" matches "code", etc.
+      return new RegExp(`(^|[^a-z0-9])${escaped}[a-z]*(?=[^a-z0-9]|$)`, 'i').test(query);
     });
   }
 
   isStandaloneGreeting(query) {
     return query.length < 20 && !query.includes('?') &&
            !this.matchesAny(query, ['who', 'what', 'how', 'why', 'where', 'when', 'can', 'about', 'tell', 'your', 'do']);
+  }
+
+  /** Matches named technologies ("Python", "React", "Docker") and returns a tailored answer. */
+  matchTechnology(query) {
+    const answers = this.knowledgeBase.person.technologyAnswers || {};
+    const keys = Object.keys(answers).sort((a, b) => b.length - a.length);
+    for (const key of keys) {
+      const escaped = key.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      if (new RegExp(`(^|[^a-z0-9])${escaped}(?=[^a-z0-9]|$)`, 'i').test(query)) {
+        return answers[key];
+      }
+    }
+    return null;
   }
 
   getRandomResponse(category) {
@@ -315,7 +359,7 @@ class OdinAgent {
 
   describeHiring() {
     const p = this.knowledgeBase.person;
-    return `${p.hiring}`;
+    return `${p.hiring}\n\nAvailability: ${p.availability}\n\nRates: ${p.rates}`;
   }
 
   describeLocation() {
@@ -347,11 +391,11 @@ class OdinAgent {
   }
 
   getDefaultResponse() {
-    return `I don't have a specific answer for that, but I can help with:\n\n` +
-      `- Stephane's background, experience, and skills\n` +
-      `- His certifications and Credly badges\n` +
-      `- His projects and portfolio\n` +
-      `- How to hire him or download his résumé\n\n` +
+    return `Good question — I'm an in-browser demo, so I don't have an answer for everything yet. I can help with:\n\n` +
+      `• Skills — "Can he code in Python?" or "What are his skills?"\n` +
+      `• AI experience — "What is his experience with AI?"\n` +
+      `• Certifications — "Tell me about his certifications"\n` +
+      `• Hiring — "Is he available for work?" or "What are his rates?"\n\n` +
       `What would you like to know?`;
   }
 }

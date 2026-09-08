@@ -131,6 +131,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // --- Chatbot ---
   const chatIcon = document.getElementById('chatIcon');
   const chatWindow = document.getElementById('chatWindow');
+  const chatHint = document.getElementById('chatHint');
   const closeChatBtn = document.getElementById('closeChat');
   const chatInput = document.getElementById('chatInput');
   const sendMessageButton = document.getElementById('sendMessage');
@@ -139,6 +140,7 @@ document.addEventListener('DOMContentLoaded', function() {
   if (chatIcon && chatWindow) {
     chatIcon.addEventListener('click', () => {
       chatWindow.classList.toggle('open');
+      if (chatHint) chatHint.style.display = 'none';
       if (chatWindow.classList.contains('open') && chatInput) chatInput.focus();
     });
   }
