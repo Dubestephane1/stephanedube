@@ -101,7 +101,8 @@ class OdinAgent {
             links: {
               github: "https://github.com/Dubestephane1",
               linkedin: "https://www.linkedin.com/in/dubestephane/",
-              credly: "https://www.credly.com/users/stephanedube"
+              credly: "https://www.credly.com/users/stephanedube",
+              youtube: "https://www.youtube.com/channel/UCM1Jn1OxNLAX1_63gok7UQA"
             },
             resume: "Stephane_Dube.html",
             availability: "Open to new opportunities and collaborations — full-time, freelance, or contract, remote-first.",
@@ -235,7 +236,7 @@ class OdinAgent {
     }
 
     // Socials
-    if (this.matchesAny(q, ['github', 'linkedin', 'twitter', 'social', 'x profile', 'x.com'])) {
+    if (this.matchesAny(q, ['github', 'linkedin', 'twitter', 'social', 'x profile', 'x.com', 'youtube', 'white hair', 'channel', 'video', 'videos'])) {
       return this.describeSocials();
     }
 
@@ -377,6 +378,7 @@ class OdinAgent {
       `Email: ${p.contactEmail}\n` +
       `LinkedIn: ${p.links.linkedin}\n` +
       `GitHub: ${p.links.github}\n` +
+      `YouTube: ${p.links.youtube} ("White hair in tech")\n` +
       `Credly: ${p.links.credly}\n\n` +
       `${p.availability}`;
   }
@@ -384,6 +386,7 @@ class OdinAgent {
   describeSocials() {
     const p = this.knowledgeBase.person;
     return `Here are ${p.name}'s profiles:\n` +
+      `• YouTube "White hair in tech" — ${p.links.youtube}\n` +
       `• GitHub: ${p.links.github}\n` +
       `• LinkedIn: ${p.links.linkedin}\n` +
       `• Credly: ${p.links.credly}\n\n` +
