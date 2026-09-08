@@ -1,96 +1,137 @@
-// Odin Principles: Self-Healing & Autonomous Operation
+// Portfolio interactions — scroll animations, nav, chatbot, terminal typing.
 document.addEventListener('DOMContentLoaded', function() {
-  // Fade-in sections on scroll
-  const fadeInSections = document.querySelectorAll('.fade-in-section');
 
-  const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-  };
+  // --- Fade-in sections on scroll ---
+  const fadeInSections = document.querySelectorAll('.fade-in-section');
+  const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('is-visible');
-        // Unobserve after animation for performance
         observer.unobserve(entry.target);
       }
     });
   }, observerOptions);
 
-  fadeInSections.forEach(section => {
-    observer.observe(section);
-  });
+  fadeInSections.forEach(section => observer.observe(section));
 
-  // Auto-update footer year
+  // --- Auto-update footer year ---
   const yearEl = document.getElementById('year');
-  if (yearEl) {
-    yearEl.textContent = new Date().getFullYear();
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  // --- Navbar: shadow on scroll + active link ---
+  const navbar = document.getElementById('navbar');
+
+  function updateNavbar() {
+    if (navbar) {
+      navbar.classList.toggle('scrolled', window.scrollY > 10);
+    }
+    updateActiveNavLink();
   }
 
-  // Active nav link highlighting
   const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('.nav-links a');
+  const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
 
   function updateActiveNavLink() {
-    let scrollPosition = window.scrollY;
+    const scrollPosition = window.scrollY + 120;
+    let currentId = null;
 
     sections.forEach(section => {
-      const sectionTop = section.offsetTop - 100; // Account for header
-      const sectionHeight = section.offsetHeight;
-      const sectionId = section.getAttribute('id');
-
-      if (
-        scrollPosition >= sectionTop &&
-        scrollPosition < sectionTop + sectionHeight
-      ) {
-        navLinks.forEach(link => {
-          link.classList.remove('active');
-          if (link.getAttribute('href') === `#${sectionId}`) {
-            link.classList.add('active');
-          }
-        });
+      if (scrollPosition >= section.offsetTop) {
+        currentId = section.getAttribute('id');
       }
     });
-  }
 
-  // Add active class styling
-  const navStyle = document.createElement('style');
-  navStyle.textContent = `
-    .nav-links a.active {
-      color: var(--primary-color) !important;
-      font-weight: 600;
-    }
-    .nav-links a.active::after {
-      width: 100% !important;
-    }
-  `;
-  document.head.appendChild(navStyle);
-
-  // Update on scroll and load
-  window.addEventListener('scroll', () => {
-    requestAnimationFrame(updateActiveNavLink);
-  });
-
-  // Initial check
-  updateActiveNavLink();
-
-  // Video playback rate
-  const video = document.getElementById("background-video");
-  if (video) {
-    video.playbackRate = 0.5;
-
-    // Add error handling for video
-    video.addEventListener('error', function(e) {
-      console.warn('Video loading failed, showing fallback', e);
-      // Could add fallback image here
+    navLinks.forEach(link => {
+      link.classList.toggle('active', link.getAttribute('href') === `#${currentId}`);
     });
   }
 
-  // Chatbot toggle
-  const chatIcon = document.querySelector('.chat-icon');
-  const chatWindow = document.querySelector('.chat-window');
-  const closeChatBtn = document.querySelector('.close-chat');
+  window.addEventListener('scroll', () => requestAnimationFrame(updateNavbar));
+  updateNavbar();
+
+  // --- Mobile menu toggle ---
+  if (navbar) {
+    const mobileBtn = document.createElement('button');
+    mobileBtn.className = 'mobile-menu-btn';
+    mobileBtn.innerHTML = '<i class="fas fa-bars"></i>';
+    mobileBtn.setAttribute('aria-label', 'Toggle navigation menu');
+    mobileBtn.setAttribute('aria-expanded', 'false');
+
+    const navLogo = navbar.querySelector('.nav-logo');
+    if (navLogo) navLogo.parentNode.insertBefore(mobileBtn, navLogo.nextSibling);
+
+    const navList = navbar.querySelector('.nav-links');
+    if (navList) {
+      mobileBtn.addEventListener('click', () => {
+        const isExpanded = mobileBtn.getAttribute('aria-expanded') === 'true';
+        mobileBtn.setAttribute('aria-expanded', !isExpanded);
+        navList.classList.toggle('mobile-active');
+        const icon = mobileBtn.querySelector('i');
+        icon.className = isExpanded ? 'fas fa-bars' : 'fas fa-times';
+      });
+
+      // Close menu when a link is clicked
+      navList.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', () => {
+          navList.classList.remove('mobile-active');
+          mobileBtn.setAttribute('aria-expanded', 'false');
+          const icon = mobileBtn.querySelector('i');
+          if (icon) icon.className = 'fas fa-bars';
+        });
+      });
+    }
+  }
+
+  // --- Hero terminal: live typing effect ---
+  const typeLine = document.getElementById('typeLine');
+  if (typeLine) {
+    const lines = [
+      'whoami',
+      'AI Engineer · Full-Stack Developer',
+      'python deploy.py --production',
+      '✓ build passed | pylint 10.00/10',
+      '✓ 2× Harvard · Google IT ×2 · Microsoft · IBM DevOps · 60+ badges',
+      'ready for work — let\'s talk ▍',
+    ];
+    let lineIdx = 0;
+    let charIdx = 0;
+    let deleting = false;
+
+    function type() {
+      const current = lines[lineIdx];
+
+      if (!deleting) {
+        charIdx++;
+        typeLine.textContent = current.substring(0, charIdx);
+
+        if (charIdx === current.length) {
+          deleting = true;
+          setTimeout(type, 2200); // pause at full line
+        } else {
+          setTimeout(type, 34); // typing speed
+        }
+      } else {
+        charIdx--;
+        typeLine.textContent = current.substring(0, charIdx);
+
+        if (charIdx === 0) {
+          deleting = false;
+          lineIdx = (lineIdx + 1) % lines.length;
+          setTimeout(type, 500);
+        } else {
+          setTimeout(type, 14); // deleting speed
+        }
+      }
+    }
+    setTimeout(type, 1200);
+  }
+
+  // --- Chatbot ---
+  const chatIcon = document.getElementById('chatIcon');
+  const chatWindow = document.getElementById('chatWindow');
+  const closeChatBtn = document.getElementById('closeChat');
   const chatInput = document.getElementById('chatInput');
   const sendMessageButton = document.getElementById('sendMessage');
   const chatMessages = document.querySelector('.chat-messages');
@@ -98,20 +139,14 @@ document.addEventListener('DOMContentLoaded', function() {
   if (chatIcon && chatWindow) {
     chatIcon.addEventListener('click', () => {
       chatWindow.classList.toggle('open');
-      // Focus input when opening chat
-      if (chatWindow.classList.contains('open') && chatInput) {
-        chatInput.focus();
-      }
+      if (chatWindow.classList.contains('open') && chatInput) chatInput.focus();
     });
   }
 
   if (closeChatBtn && chatWindow) {
-    closeChatBtn.addEventListener('click', () => {
-      chatWindow.classList.remove('open');
-    });
+    closeChatBtn.addEventListener('click', () => chatWindow.classList.remove('open'));
   }
 
-  // Chat functionality
   function escapeHtml(str) {
     return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
   }
@@ -125,51 +160,36 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const messageDiv = document.createElement('div');
     messageDiv.className = `message ${isUser ? 'user-message' : 'ai-message'}`;
-    // Collapse consecutive newlines so multi-paragraph replies don't leave empty lines
     const formatted = content.replace(/\n{2,}/g, '\n');
 
     if (isUser) {
-      // User input is rendered as plain, escaped text
       messageDiv.textContent = formatted.replace(/\n/g, ' ');
     } else {
-      // Bot responses (trusted content) can include clickable links
       messageDiv.innerHTML = autoLink(escapeHtml(formatted)).replace(/\n/g, '<br>');
     }
     chatMessages.appendChild(messageDiv);
-    
-    // Scroll to bottom
     chatMessages.scrollTop = chatMessages.scrollHeight;
   }
 
   async function handleSendMessage() {
     if (!chatInput || !window.odinAgent) return;
-    
+
     const message = chatInput.value.trim();
     if (!message) return;
-    
-    // Add user message
+
     addMessage(message, true);
-    
-    // Clear input
     chatInput.value = '';
-    
+
     try {
-      // Get response from Odin agent
       const response = await window.odinAgent.processQuery(message);
-      // Add bot response
       addMessage(response, false);
     } catch (error) {
-      console.error('Error getting response from Odin agent:', error);
-      addMessage("Sorry, I'm having trouble processing your request. Please try again.", false);
+      console.error('Error getting response:', error);
+      addMessage("Sorry, I'm having trouble processing that. Please try again.", false);
     }
   }
 
-  // Send message button click
-  if (sendMessageButton) {
-    sendMessageButton.addEventListener('click', handleSendMessage);
-  }
-
-  // Enter key in input
+  if (sendMessageButton) sendMessageButton.addEventListener('click', handleSendMessage);
   if (chatInput) {
     chatInput.addEventListener('keypress', (e) => {
       if (e.key === 'Enter') {
@@ -177,152 +197,22 @@ document.addEventListener('DOMContentLoaded', function() {
         handleSendMessage();
       }
     });
+
+    // Quickly open the bot if the user types anywhere (nice touch, optional)
+    // Note: disabled to avoid surprises — the floating icon is enough.
   }
 
-  // Animate skill badges on hover
-  const skillBadges = document.querySelectorAll('.skill-badge');
-  skillBadges.forEach(badge => {
-    badge.addEventListener('mouseenter', () => {
-      badge.style.transform = 'scale(1.1)';
-      badge.style.transition = 'transform 0.2s ease';
-    });
-
-    badge.addEventListener('mouseleave', () => {
-      badge.style.transform = 'scale(1)';
+  // --- Chat suggestion chips ---
+  const suggestions = document.querySelectorAll('.suggestion');
+  suggestions.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const q = btn.getAttribute('data-q');
+      if (!q || !chatInput || !window.odinAgent) return;
+      chatInput.value = q;
+      handleSendMessage();
     });
   });
 
-  // Add mobile menu toggle functionality
-  const navbar = document.querySelector('.navbar');
-  if (navbar) {
-    // Create mobile menu button
-    const mobileBtn = document.createElement('button');
-    mobileBtn.className = 'mobile-menu-btn';
-    mobileBtn.innerHTML = '<i class="fas fa-bars"></i>';
-    mobileBtn.setAttribute('aria-label', 'Toggle navigation menu');
-    mobileBtn.setAttribute('aria-expanded', 'false');
-
-    // Insert after nav-logo
-    const navLogo = navbar.querySelector('.nav-logo');
-    if (navLogo) {
-      navLogo.parentNode.insertBefore(mobileBtn, navLogo.nextSibling);
-    }
-
-    const navLinks = navbar.querySelector('.nav-links');
-    if (navLinks) {
-      mobileBtn.addEventListener('click', () => {
-        const isExpanded = mobileBtn.getAttribute('aria-expanded') === 'true';
-        mobileBtn.setAttribute('aria-expanded', !isExpanded);
-        navLinks.classList.toggle('mobile-active');
-
-        // Animate burger to X
-        const icon = mobileBtn.querySelector('i');
-        if (isExpanded) {
-          icon.className = 'fas fa-bars';
-        } else {
-          icon.className = 'fas fa-times';
-        }
-      });
-    }
-
-    // Add mobile menu styles
-    const mobileStyle = document.createElement('style');
-    mobileStyle.textContent = `
-      .mobile-menu-btn {
-        display: none;
-        background: none;
-        border: none;
-        font-size: 1.5rem;
-        cursor: pointer;
-        padding: 0.5rem;
-      }
-
-      @media (max-width: 768px) {
-        .mobile-menu-btn {
-          display: block;
-        }
-
-        .nav-links {
-          position: absolute;
-          top: 100%;
-          left: 0;
-          right: 0;
-          background: rgba(18, 18, 18, 0.9);
-          backdrop-filter: blur(10px);
-          flex-direction: column;
-          align-items: center;
-          padding: 1rem 0;
-          box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-          display: none;
-        }
-
-        .nav-links.mobile-active {
-          display: flex;
-        }
-
-        .nav-links li {
-          margin: 0.5rem 0;
-        }
-      }
-    `;
-    document.head.appendChild(mobileStyle);
-  }
-
-  // Lazy load background video if supported
-  const backgroundVideo = document.getElementById('background-video');
-  if (backgroundVideo) {
-    // Check if we should load video based on connection/preferences
-    if (navigator.connection &&
-        (navigator.connection.saveData ||
-         navigator.connection.effectiveType === '2g')) {
-      // Save data or slow connection - use poster image instead
-      backgroundVideo.style.display = 'none';
-      // Would normally show a poster image here
-    }
-  }
-
-  // Expose some functions for debugging/testing (transparency)
-  window.odinUtils = {
-    refreshAnimations: () => {
-      // Re-run observers if needed
-      console.log('Odin utilities: Animation refresh triggered');
-    },
-    getVersion: () => '1.0.0'
-  };
-
-  // Service Worker registration for offline capabilities (Self-Healing)
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('./sw.js')
-        .then(registration => {
-          console.log('ServiceWorker registration successful with scope: ', registration.scope);
-        })
-        .catch(error => {
-          console.log('ServiceWorker registration failed: ', error);
-        });
-    });
-  }
-
-  // Performance monitoring (Ruthless Simplicity - measure what matters)
-  if (window.PerformanceObserver) {
-    const perfObserver = new PerformanceObserver((list) => {
-      for (const entry of list.getEntries()) {
-        // Log performance metrics for continuous improvement
-        console.log(`Performance: ${entry.name} - ${entry.duration.toFixed(2)}ms`);
-      }
-    });
-    perfObserver.observe({entryTypes: ['measure', 'mark', 'layout-shift', 'largest-contentful-paint']});
-  }
-
-  // Error reporting for Self-Healing
-  window.addEventListener('error', (e) => {
-    console.error('Error caught:', e.error);
-    // In a production system, this would send to error tracking
-  });
-
-  // Unhandled promise rejection handling
-  window.addEventListener('unhandledrejection', (event) => {
-    console.warn('Unhandled promise rejection:', event.reason);
-    // In a production system, this would send to error tracking
-  });
+  // --- Global error logging (kept light for debugging) ---
+  window.addEventListener('error', (e) => console.error('Error caught:', e.error));
 });

@@ -3,18 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Stephane Dube - Developer, Python programmer, and AI enthusiast. Explore my projects in web development, LLM, artificial Intelligence and responsive design." />
-  <meta name="keywords" content="Python developer, AI programmer, web developer, Stephane Dube, LLM, AI, web design" />
-  <meta property="og:title" content="Stephane Dube - Developer & AI Builder" />
-  <meta property="og:description" content="Building intelligent web apps with Python and AI." />
-  <meta property="og:image" content="https://stephanedube.odinforge.space/assets/stephanedube.png" />
+  <meta name="description" content="Stephane Dube — AI Engineer & Full-Stack Developer. LLM fine-tuning (SFT/RLHF), AI agents, automation, and production web applications. Remote-ready, bilingual, 10+ years building software." />
+  <meta name="keywords" content="AI Engineer, Full-Stack Developer, Python, LLM, AI Agent, SFT, RLHF, Stephane Dube, automation, web developer" />
+  <meta name="author" content="Stephane Dube" />
+  <meta property="og:title" content="Stephane Dube — AI Engineer & Full-Stack Developer" />
+  <meta property="og:description" content="I build AI agents, data pipelines, and web apps that do real work. Remote-ready and currently open to new opportunities." />
+  <meta property="og:image" content="assets/stephane.jpg" />
   <meta property="og:url" content="https://stephanedube.odinforge.space" />
+  <meta property="og:type" content="website" />
 
-  <title>Stephane Dube - Programmer & Web Designer</title>
+  <title>Stephane Dube — AI Engineer & Full-Stack Developer</title>
 
   <link rel="icon" type="image/png" href="assets/odinicon.png">
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
@@ -25,30 +28,79 @@
 </head>
 <body>
   <!-- Navigation -->
-  <nav class="navbar">
+  <nav class="navbar" id="navbar">
     <div class="container">
-      <a href="#home" class="nav-logo">Stephane Dube</a>
+      <a href="#home" class="nav-logo">Stéphane<span>.</span>Dubé</a>
       <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="https://www.skills.google/public_profiles/04a83f8f-3acf-40f5-9893-2fe1a235a5d3" target="_blank">Google Badge</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
+        <li><a href="Stephane_Dube.html" class="nav-cta" target="_blank" rel="noopener"><i class="fa-solid fa-file-arrow-down"></i> Resume</a></li>
       </ul>
     </div>
   </nav>
 
-  <!-- Header -->
-  <header id="home" class="video-header">
-    <video autoplay muted loop id="background-video">
-      <source src="assets/loop.mp4" type="video/mp4">
-    </video>
+  <!-- Hero -->
+  <header id="home" class="hero">
     <div class="container">
-      <h1>Stephane Dube</h1>
-      <p class="tagline">Developer • Python & AI Agent • Automation</p>
-      <p>I build intelligent, responsive web applications using modern tools and AI Agent.</p>
-      <div class="actions">
-        <a href="https://odinforge.pages.dev/" target="_blank">View My Work</a>
-        <a href="#contact" class="secondary">Contact Me</a>
+      <div class="hero-copy">
+        <span class="hero-eyebrow"><span class="dot"></span> Available for remote work</span>
+        <h1>Stéphane Dubé<br /><span class="grad-text">AI Engineer &amp; Full-Stack Developer</span></h1>
+        <p class="sub">I build AI agents, fine-tune LLMs, and ship production web applications that do real work — from supervised fine-tuning (SFT) and RLHF to automation that saves teams hours every week.</p>
+        <div class="actions">
+          <a href="#projects" class="btn btn-primary"><i class="fa-solid fa-rocket"></i> See My Work</a>
+          <a href="Stephane_Dube.html" class="btn btn-ghost" target="_blank" rel="noopener"><i class="fa-solid fa-file-arrow-down"></i> Download Résumé</a>
+          <a href="#contact" class="btn btn-ghost"><i class="fa-solid fa-envelope"></i> Contact Me</a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat"><span class="num">10+</span><span class="lbl">Years building software</span></div>
+          <div class="hero-stat"><span class="num">60+</span><span class="lbl">Google skill badges</span></div>
+          <div class="hero-stat"><span class="num">6</span><span class="lbl">Professional certificates</span></div>
+          <div class="hero-stat"><span class="num">EN/FR</span><span class="lbl">Bilingual · Remote-ready</span></div>
+        </div>
+      </div>
+
+      <!-- 3D developer deck (pure CSS, no images to load) -->
+      <div class="hero-deck" aria-hidden="true">
+        <div class="orbit orbit-1"></div>
+        <div class="orbit orbit-2"></div>
+
+        <div class="deck-card code-card">
+          <div class="code-bar">
+            <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+            <span class="code-title">agent.py</span>
+          </div>
+          <div class="code-body"><span class="c-cmt"># autonomous AI agent</span>
+<span class="c-key">from</span> llm <span class="c-key">import</span> Agent
+
+agent = Agent(<span class="c-str">"Odin"</span>)
+plan  = agent.plan(<span class="c-str">"task"</span>)
+<span class="c-fn">for</span> step <span class="c-key">in</span> plan:
+    agent.execute(step)
+    agent.verify(step)  <span class="c-cmt"># ✓</span></div>
+        </div>
+
+        <div class="deck-card terminal-card">
+          <div class="term-bar">
+            <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+            <span class="term-title">stephane@dev</span>
+          </div>
+          <div class="term-body">
+            <span class="prompt">$</span> <span id="typeLine"></span><span class="cursor">▍</span>
+          </div>
+        </div>
+
+        <div class="deck-card chip-card">
+          <i class="fa-solid fa-microchip"></i>
+          <span>AI · LLM · Agents</span>
+        </div>
+
+        <div class="float-chip chip-a"><i class="fa-brands fa-python"></i> Python</div>
+        <div class="float-chip chip-b"><i class="fa-brands fa-github"></i> GitHub</div>
+        <div class="float-chip chip-c"><i class="fa-solid fa-robot"></i> Agentic</div>
       </div>
     </div>
   </header>
@@ -56,27 +108,256 @@
   <!-- About -->
   <section id="about" class="fade-in-section">
     <div class="container">
-      <h2 class="section-title">About Me</h2>
-      <div class="about-content">
-        <div class="about-image">
-          <img src="assets/stephane.jpg" alt="Stephane Dube">
+      <div class="section-head">
+        <span class="section-eyebrow">About</span>
+        <h2>Engineer by trade, <span class="grad-text">problem-solver by habit</span></h2>
+        <p>A Canadian developer based in Southeast Asia, building production systems where AI meets real-world workflows.</p>
+      </div>
+      <div class="about-grid">
+        <div class="about-photo">
+          <img src="assets/stephane.jpg" alt="Stephane Dube" loading="lazy" />
+          <span class="photo-tag"><i class="fa-solid fa-location-dot"></i> Thailand · Remote</span>
         </div>
         <div class="about-text">
-          <p>Hello! I'm Stephane, a passionate Canadian developer and AI enthusiast based in Southeast Asia, specializing in Python, web development, and integrating AI into practical applications.</p>
-          <p>With a strong foundation in both design and programming, I create clean, performant, and user-friendly experiences from dynamic websites to AI-powered tools.</p>
-          <div class="skills-container">
-            <div class="skill-badge"><i class="fab fa-python"></i> Python</div>
-            <div class="skill-badge"><i class="fab fa-html5"></i> HTML</div>
-            <div class="skill-badge"><i class="fa-brands fa-php"></i> PHP</div>
-            <div class="skill-badge"><i class="fab fa-js-square"></i> JavaScript</div>
-            <div class="skill-badge"><i class="fa-solid fa-square-binary"></i> L.L.M.</div>
-            <div class="skill-badge"><i class="fa-solid fa-code-branch"></i> N8N</div>
-            <div class="skill-badge"><i class="fa-brands fa-css3-alt"></i> CSS</div>
-            <div class="skill-badge"><i class="fa-solid fa-robot"></i> Agentic</div>
-            <div class="skill-badge"><i class="fa-solid fa-brain"></i> A.I.</div>
-            <div class="skill-badge"><i class="fab fa-git-alt"></i> GitHub</div>
+          <p>I'm an AI Engineer and Full-Stack Developer currently working as an AI Agent Operator for <strong>Invisible Technologies</strong> (San Francisco), where I create instruction-aligned training data and evaluate LLM behavior through SFT and RLHF for a leading AI provider.</p>
+          <p>On the product side, I founded <strong>OdinForge</strong> — I've designed and shipped AI-powered tools (document intelligence, agent governance reviews, a custom Python AI agent) alongside responsive web applications used by real clients.</p>
+          <div class="about-highlights">
+            <div class="highlight">
+              <i class="fa-solid fa-robot"></i>
+              <div><strong>AI Agents &amp; LLMs</strong><span>SFT, RLHF, prompt engineering, agent orchestration, local LLM deployment</span></div>
+            </div>
+            <div class="highlight">
+              <i class="fa-solid fa-code"></i>
+              <div><strong>Full-Stack Engineering</strong><span>Python, JavaScript, PHP, SQL, cloud deployment, API integration</span></div>
+            </div>
+            <div class="highlight">
+              <i class="fa-solid fa-globe"></i>
+              <div><strong>Remote-First</strong><span>10+ years across time zones with remote teams and clients</span></div>
+            </div>
+            <div class="highlight">
+              <i class="fa-solid fa-language"></i>
+              <div><strong>Bilingual</strong><span>Fluent English &amp; French — technical and business contexts</span></div>
+            </div>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="fade-in-section">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-eyebrow">Skills</span>
+        <h2>What I work with</h2>
+        <p>From model training to production deployment — the stack I use to ship real results.</p>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="ico"><i class="fa-solid fa-microchip"></i></div>
+          <h3>AI &amp; LLM</h3>
+          <div class="skill-tags">
+            <span class="skill-tag hot">SFT</span>
+            <span class="skill-tag hot">RLHF</span>
+            <span class="skill-tag hot">Prompt Engineering</span>
+            <span class="skill-tag">Agent Orchestration</span>
+            <span class="skill-tag">Local LLMs (Ollama / Open WebUI)</span>
+            <span class="skill-tag">Gemini Agents &amp; CLI</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="ico"><i class="fa-solid fa-code"></i></div>
+          <h3>Programming</h3>
+          <div class="skill-tags">
+            <span class="skill-tag hot">Python</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">PHP</span>
+            <span class="skill-tag">SQL / MySQL</span>
+            <span class="skill-tag">HTML5 &amp; CSS3</span>
+            <span class="skill-tag">PineScript</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="ico"><i class="fa-solid fa-toolbox"></i></div>
+          <h3>Tools &amp; Platforms</h3>
+          <div class="skill-tags">
+            <span class="skill-tag hot">Git / GitHub</span>
+            <span class="skill-tag">Cloudflare Pages</span>
+            <span class="skill-tag">n8n Automation</span>
+            <span class="skill-tag">WordPress</span>
+            <span class="skill-tag">Bootstrap / Tailwind</span>
+            <span class="skill-tag">Google Workspace AI</span>
+            <span class="skill-tag">Docker &amp; K8s (studying)</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="ico"><i class="fa-solid fa-database"></i></div>
+          <h3>Automation &amp; Data</h3>
+          <div class="skill-tags">
+            <span class="skill-tag hot">Web Scraping</span>
+            <span class="skill-tag hot">API Integration</span>
+            <span class="skill-tag">Data Pipelines</span>
+            <span class="skill-tag">Analytics Reporting</span>
+            <span class="skill-tag">Workflow Automation</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience" class="fade-in-section">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-eyebrow">Experience</span>
+        <h2>Career <span class="grad-text">timeline</span></h2>
+        <p>A 20-year arc — from premium automotive sales to shipping production AI systems.</p>
+      </div>
+      <div class="timeline">
+
+        <div class="tl-item">
+          <div class="tl-head">
+            <span class="tl-role">AI Agent Operator</span>
+            <span class="tl-company">Invisible Technologies (SF, remote)</span>
+            <span class="tl-dates">May 2025 — Present</span>
+          </div>
+          <ul>
+            <li>Create instruction-aligned training data for advanced LLMs through Supervised Fine-Tuning (SFT).</li>
+            <li>Perform RLHF — output ranking, preference labeling, and model behavior optimization.</li>
+            <li>Execute time-sensitive remote workflows with 100% accuracy and detailed performance logs.</li>
+            <li>Evaluate LLM responses against strict specs to improve reasoning and instruction-following.</li>
+          </ul>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-head">
+            <span class="tl-role">AI Developer &amp; Full-Stack Engineer</span>
+            <span class="tl-company">OdinForge (Founder)</span>
+            <span class="tl-dates">Jan 2015 — Present</span>
+          </div>
+          <ul>
+            <li>Designed and shipped <strong>MapleMind</strong> — a local AI document intelligence platform indexing contracts and policies for instant natural-language retrieval.</li>
+            <li>Built <strong>Agent Evidence</strong> — an AI agent safety &amp; governance review service delivering structured risk reports with file:line evidence.</li>
+            <li>Developed <strong>Odin</strong> — a custom AI agent in Python for multi-step reasoning, tool use, planning, and autonomous execution with extensible memory.</li>
+            <li>Ships automation workflows (n8n + Python) for content scheduling, analytics, and AI-assisted pipelines.</li>
+          </ul>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-head">
+            <span class="tl-role">Python &amp; ESL Tutor</span>
+            <span class="tl-company">OMG Language Center, Chon Buri, Thailand</span>
+            <span class="tl-dates">Feb 2021 — Present</span>
+          </div>
+          <ul>
+            <li>Taught Python and HTML, building foundational programming and automation skills.</li>
+            <li>Created multimedia training materials achieving 90% student satisfaction.</li>
+          </ul>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-head">
+            <span class="tl-role">Digital Marketing &amp; Dive Instructor</span>
+            <span class="tl-company">Dolphin Divers, Koh Chang, Thailand</span>
+            <span class="tl-dates">May 2018 — Apr 2020</span>
+          </div>
+          <ul>
+            <li>Increased course enrollment 12% through targeted X (Twitter) and Google Ads campaigns.</li>
+            <li>Structured scuba education programs improving satisfaction and retention.</li>
+          </ul>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-head">
+            <span class="tl-role">Automobile Sales Representative</span>
+            <span class="tl-company">Mercedes-Benz Canada · Ford · Audi</span>
+            <span class="tl-dates">Feb 2004 — Jan 2014</span>
+          </div>
+          <ul>
+            <li>Ranked top 10% of sales performers across multiple premium brands.</li>
+            <li>Awarded "Best Salesman" four consecutive months in 2012.</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications -->
+  <section id="certifications" class="fade-in-section">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-eyebrow">Certifications</span>
+        <h2>Proof of <span class="grad-text">continuous learning</span></h2>
+        <p>University-level programs and industry professional certificates — plus 29 course certificates earned inside those programs, all verifiable.</p>
+      </div>
+
+      <div class="cert-grid">
+        <div class="cert-card">
+          <div class="cert-media"><img src="images/CS50AI.png" alt="CS50 Introduction to Artificial Intelligence with Python — Harvard University" loading="lazy" /></div>
+          <div class="cert-body">
+            <span class="cert-org">Harvard University</span>
+            <h3>CS50 Introduction to Artificial Intelligence</h3>
+            <p>Concepts and algorithms powering modern AI — game-playing engines, search, knowledge, and learning with Python.</p>
+            <div class="cert-meta"><span>2023</span><a href="https://pll.harvard.edu/course/cs50s-introduction-artificial-intelligence-python" target="_blank" rel="noopener">View course <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-media"><img src="images/CS50Pcertificate.png" alt="CS50 Programming with Python — Harvard University" loading="lazy" /></div>
+          <div class="cert-body">
+            <span class="cert-org">Harvard University</span>
+            <h3>CS50 Programming with Python</h3>
+            <p>A rigorous foundation in Python — object-oriented design, libraries, testing, and problem solving.</p>
+            <div class="cert-meta"><span>2022</span><a href="https://pll.harvard.edu/course/cs50p-python-programming" target="_blank" rel="noopener">View course <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-media"><img src="images/Google_IT_Support.png" alt="Google IT Support Professional Certificate" loading="lazy" /></div>
+          <div class="cert-body">
+            <span class="cert-org">Google · Coursera</span>
+            <h3>IT Support Professional Certificate</h3>
+            <p>Troubleshooting, system administration, networking, security, and customer support — the full Google IT Support curriculum.</p>
+            <div class="cert-meta"><span>2026</span><a href="https://www.coursera.org/professional-certificates/google-it-support" target="_blank" rel="noopener">View course <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-media"><img src="images/Google_IT_Automation_Certificate.png" alt="Google IT Automation — Python" loading="lazy" /></div>
+          <div class="cert-body">
+            <span class="cert-org">Google · Coursera</span>
+            <h3>IT Automation with Python</h3>
+            <p>Automating IT tasks with Python — scripts, version control, testing, and working with real IT workflows.</p>
+            <div class="cert-meta"><span>2026</span><a href="https://www.coursera.org/professional-certificates/google-it-automation" target="_blank" rel="noopener">View course <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-media"><img src="images/Microsoft_IT_Support_Certificate.png" alt="Microsoft IT Support Specialist — Certificate" loading="lazy" /></div>
+          <div class="cert-body">
+            <span class="cert-org">Microsoft</span>
+            <h3>IT Support Specialist</h3>
+            <p>Infrastructure, troubleshooting, and end-user support fundamentals from Microsoft's IT curriculum.</p>
+            <div class="cert-meta"><span>2026</span></div>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-media"><i class="fa-solid fa-box-open ph"></i></div>
+          <div class="cert-body">
+            <span class="cert-org">IBM · Coursera</span>
+            <h3>DevOps &amp; Software Engineering (all courses complete)</h3>
+            <p>All 9 courses done — Git/GitHub, Agile, cloud computing, DevOps, CI/CD, monitoring, and application security. Final certificate issuing.</p>
+            <div class="cert-meta"><span>2026</span><a href="https://www.coursera.org/professional-certificates/devops-and-software-engineering" target="_blank" rel="noopener">View program <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cert-cta">
+        <p>All my verified industry badges are on Credly — request proof anytime.</p>
+        <a href="https://www.credly.com/users/stephanedube" class="btn btn-primary" target="_blank" rel="noopener"><span class="credly-c">C</span> View My Credly Badges</a>
+        <p class="cert-note">Plus <strong>60+ Google skill badges</strong> across Gemini, LLMs, Generative AI &amp; Responsible AI — <a href="https://www.skills.google/public_profiles/04a83f8f-3acf-40f5-9893-2fe1a235a5d3" target="_blank" rel="noopener">view profile</a>.</p>
       </div>
     </div>
   </section>
@@ -84,33 +365,45 @@
   <!-- Projects -->
   <section id="projects" class="fade-in-section">
     <div class="container">
-      <h2>Featured Projects</h2>
+      <div class="section-head">
+        <span class="section-eyebrow">Projects</span>
+        <h2>Things I've <span class="grad-text">built</span></h2>
+        <p>Selected work — from scratch-built AI agents to productized services.</p>
+      </div>
       <div class="projects-grid">
-        
-        <!-- Project 1 -->
+
         <div class="project-card">
-          <h3>Autonomous AI Agent</h3>
-          <div class="tech-stack">Python • Agentic</div>
-          <p>Odin is a custom AI agent built from scratch in Python. Leverages LLM to handle multi-step reasoning, tool use, planning, and autonomous task execution. Designed for flexibility and control, can be extended with custom tools, memory, and workflows to solve complex problems.</p>
-          <a href="mailto:dubestephane@protonmail.com"><i class="fa-solid fa-envelope"></i> Ask me</a>
+          <div class="p-ico"><i class="fa-solid fa-robot"></i></div>
+          <h3>Odin — Autonomous AI Agent</h3>
+          <div class="tech-stack">Python · LLM · Agentic</div>
+          <p>A custom AI agent built from scratch in Python: multi-step reasoning, tool use, planning, memory, and autonomous task execution — engineered for control and extensibility.</p>
+          <a href="https://github.com/Dubestephane1" target="_blank" rel="noopener" class="p-link"><i class="fab fa-github"></i> View code</a>
         </div>
 
-        <!-- Project 2 -->
         <div class="project-card">
-          <h3>Portfolio Website with OdinForge</h3>
-          <div class="tech-stack">HTML • CSS • JavaScript • Cloudflare • Python</div>
-          <p>My personal website features apps I coded, including a Pomodoro timer, Tic Tac Toe, Abacus, Tetris, and a Notion-inspired app.</p>
-          <a href="https://github.com/Dubestephane1" target="_blank"><i class="fab fa-github"></i> View Code</a>
+          <div class="p-ico"><i class="fa-solid fa-layer-group"></i></div>
+          <h3>OdinForge — App Portfolio</h3>
+          <div class="tech-stack">HTML · CSS · JS · Cloudflare · Python</div>
+          <p>A collection of working applications I built from scratch — Pomodoro timer, Tic Tac Toe, Abacus, Tetris, and a Notion-inspired productivity app.</p>
+          <a href="https://odinforge.pages.dev/" target="_blank" rel="noopener" class="p-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Visit OdinForge</a>
         </div>
 
-        <!-- Project 3 -->
         <div class="project-card">
-          <h3>Harvard CS50 certificates </h3>
-          <div class="tech-stack">Artificial Intelligence • Programming with Python</div>
-          <p>Explores the concepts and algorithms at the foundation of modern a.i. diving into game-playing engines.</p>
-          <img src="images/CS50AI.png" alt="CS50 AI Certificate" style="width:100%; border-radius:8px; margin-top:10px;">
-          <a href="https://pll.harvard.edu/course/cs50s-introduction-artificial-intelligence-python" target="_blank"><i class="fa-solid fa-link"></i> View Course</a>
+          <div class="p-ico"><i class="fa-solid fa-file-lines"></i></div>
+          <h3>MapleMind — Document Intelligence</h3>
+          <div class="tech-stack">Python · RAG · Local LLM</div>
+          <p>A private local AI platform for real estate and professional firms — indexes contracts and policies for instant natural-language retrieval, keeping data on-premise.</p>
+          <a href="mailto:dubestephane@protonmail.com" class="p-link"><i class="fa-solid fa-envelope"></i> Ask me about it</a>
         </div>
+
+        <div class="project-card">
+          <div class="p-ico"><i class="fa-solid fa-shield-halved"></i></div>
+          <h3>Agent Evidence — AI Governance</h3>
+          <div class="tech-stack">Python · Safety · Review Services</div>
+          <p>An independent AI agent safety and governance review service producing structured risk reports with file:line evidence — built for teams that need auditable AI.</p>
+          <a href="mailto:dubestephane@protonmail.com" class="p-link"><i class="fa-solid fa-envelope"></i> Ask me about it</a>
+        </div>
+
       </div>
     </div>
   </section>
@@ -118,48 +411,101 @@
   <!-- Contact -->
   <section id="contact" class="fade-in-section">
     <div class="container">
-      <h2>Get In Touch</h2>
-      <p>I am currently working remotely for <i class="fa-solid fa-circle-stop"></i> Invisible Technologies (San Francisco) as an AI Agent Operator.</p>
-      <p>I'm always open to new opportunities and collaborations.</p>
-      <p>Email: <a href="mailto:dubestephane@protonmail.com">dubestephane@protonmail.com</a></p>
-      <div class="social-links">
-        <a href="https://github.com/Dubestephane1" target="_blank" aria-label="GitHub Profile"><i class="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/dubestephane/" target="_blank" aria-label="LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
-        <a href="https://x.com/StephanOdinDube" target="_blank" aria-label="X (Twitter) Profile"><i class="fa-brands fa-x-twitter"></i></a>
+      <div class="contact-card">
+        <span class="section-eyebrow">Contact</span>
+        <h2>Let's build something</h2>
+        <p class="c-status"><span class="dot"></span> Currently open to new opportunities &amp; collaborations</p>
+        <div class="contact-line">
+          <i class="fa-solid fa-envelope"></i>
+          <a href="mailto:dubestephane@protonmail.com">dubestephane@protonmail.com</a>
+        </div>
+        <div class="contact-line">
+          <i class="fa-solid fa-location-dot"></i> Southeast Asia (Canadian) · Remote-friendly · Any timezone
+        </div>
+        <div class="actions" style="justify-content:center;">
+          <a href="mailto:dubestephane@protonmail.com" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> Send an Email</a>
+          <a href="Stephane_Dube.html" class="btn btn-ghost" target="_blank" rel="noopener"><i class="fa-solid fa-file-arrow-down"></i> Download Résumé</a>
+        </div>
+        <div class="social-links">
+          <a href="https://github.com/Dubestephane1" target="_blank" aria-label="GitHub Profile"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/dubestephane/" target="_blank" aria-label="LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
+          <a href="https://www.credly.com/users/stephanedube" target="_blank" aria-label="Credly Badges"><span class="credly-c">C</span></a>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>© <span id="year"></span> Stephane Dube. Built with ❤️ by <a href="https://odinforge.pages.dev" target="_blank" aria-label="Odin Forge Home"><img src="assets/odinicon.png" alt="Odin Forge Logo"> Odin.</a></p>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="#home" class="nav-logo" style="color:#fff;">Stéphane<span style="color:#38bdf8;">.</span>Dubé</a>
+          <p style="margin-top:0.9rem;">AI Engineer &amp; Full-Stack Developer. I build agents, automation, and applications that create measurable value.</p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul class="f-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#projects">Projects</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Connect</h4>
+          <div class="f-social">
+            <a href="https://github.com/Dubestephane1" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/dubestephane/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.credly.com/users/stephanedube" target="_blank" aria-label="Credly"><span class="credly-c">C</span></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span id="year"></span> Stéphane Dubé. All rights reserved.</p>
+        <p class="made-with">Crafted with <a href="mailto:dubestephane@protonmail.com">Odin</a> — a custom AI agent built in Python <img src="assets/odinicon.png" alt="Odin" /></p>
+      </div>
+    </div>
   </footer>
 
-  <!-- Chatbot -->
+  <!-- AI Chatbot Assistant (demo of agentic work) -->
   <div class="chatbot-container">
-    <div class="chat-icon" aria-label="Open Chat">
+    <div class="chat-icon" id="chatIcon" aria-label="Open Chat">
       <i class="fas fa-comment-dots"></i>
     </div>
-    <div class="chat-window">
+    <div class="chat-window" id="chatWindow">
       <div class="chat-header">
-        <h3>Chatbot Assistant</h3>
-        <button class="close-chat" aria-label="Close Chat"><i class="fa-solid fa-x"></i></button>
+        <div class="chat-head-info">
+          <span class="chat-bot-avatar"><i class="fa-solid fa-robot"></i></span>
+          <div>
+            <h3>Odin Assistant</h3>
+            <span class="chat-sub">AI demo · built with JavaScript</span>
+          </div>
+        </div>
+        <button class="close-chat" id="closeChat" aria-label="Close Chat"><i class="fa-solid fa-x"></i></button>
       </div>
       <div class="chat-body">
         <div class="chat-messages">
-          <div class="message bot-message">How can I help you today?</div>
+          <div class="message bot-message">Hi! I'm Odin, Stephane's AI assistant. Ask me about his skills, experience, certifications, or how to hire him!</div>
+        </div>
+        <div class="chat-suggestions">
+          <button class="suggestion" data-q="What are Stephane's skills?">Skills</button>
+          <button class="suggestion" data-q="Tell me about his certifications">Certifications</button>
+          <button class="suggestion" data-q="What is Stephane's experience?">Experience</button>
+          <button class="suggestion" data-q="How can I hire Stephane?">Hire him</button>
         </div>
       </div>
       <div class="chat-footer">
-        <input type="text" id="chatInput" placeholder="Type a message...">
-        <button id="sendMessage">Send</button>
+        <input type="text" id="chatInput" placeholder="Ask about Stephane..." autocomplete="off">
+        <button id="sendMessage" aria-label="Send"><i class="fa-solid fa-paper-plane"></i></button>
       </div>
     </div>
   </div>
 
-  <!-- Scroll Animation Script -->
+  <!-- Scripts -->
   <script src="js/script.js"></script>
-    <script src="js/miniai.js"></script>
+  <script src="js/miniai.js"></script>
   <!-- Optional: Cloudflare Web Analytics -->
   <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "4eb0c241d7764285863bcd15f98bbfcb"}'></script>
 
