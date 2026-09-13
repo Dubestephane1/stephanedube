@@ -87,9 +87,10 @@ class OdinAgent {
               "Google IT Automation with Python Professional Certificate — Coursera (2026)",
               "Microsoft IT Support Specialist Professional Certificate — Microsoft (2026)",
               "IBM DevOps & Software Engineering — IBM/Coursera (all 9 courses complete)",
+              "Preparing for Google Cloud Certification: Cloud Engineer — Google Cloud/Coursera (all 6 courses complete)",
               "60+ Google skill badges (Gemini, LLMs, Generative AI, Responsible AI)"
             ],
-            certSummary: "Harvard CS50 (AI + Python), Google IT Support, Google IT Automation with Python, Microsoft IT Support, and an IBM DevOps & Software Engineering certificate (all courses complete) — plus 60+ Google skill badges and 29 course-level certificates inside those programs.",
+            certSummary: "Harvard CS50 (AI + Python), Google IT Support, Google IT Automation with Python, Microsoft IT Support, and an IBM DevOps & Software Engineering certificate (all courses complete) — plus 60+ Google skill badges and 41 course-level certificates inside those programs.",
             googleBadges: {
               count: 60,
               platform: "Google Skills",

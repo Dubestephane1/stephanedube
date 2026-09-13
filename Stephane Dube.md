@@ -60,20 +60,21 @@ AI Engineer and Full-Stack Developer with deep expertise in Supervised Fine-Tuni
 
 ## Education & Certifications
 
-- **DevOps & Software Engineering Professional Certificate** – IBM · Coursera, 2026 (all 9 courses complete)
-- **IT Support Professional Certificate** – Google · Coursera, 2026
+- **DevOps & Software Engineering Professional Certificate** – IBM · Coursera, 2026 (all 15 courses complete)
+- **IT Support Professional** – Google · Coursera, 2026
 - **IT Automation with Python Professional Certificate** – Google · Coursera, 2026
-- **IT Support Specialist Professional Certificate** – Microsoft, 2026
+- **Google Cloud Engineer** – Google Cloud · Coursera, 2026
+- **IT Support Specialist Professional Certificate** – Microsoft · Coursera, 2026
 - **CS50 Introduction to Artificial Intelligence with Python** – Harvard University, 2023
 - **CS50 Programming with Python** – Harvard University, 2022
 - **Web Design and Programming** – CEGEP Trois-Rivières, Canada, 2015
 - **Google Skills Badges** – 60+ badges (Gemini, LLMs, Generative AI, Responsible AI) · [Profile](https://www.skills.google/public_profiles/04a83f8f-3acf-40f5-9893-2fe1a235a5d3)
 
-29 course-level certificates earned inside the programs above. All verified badges: https://www.credly.com/users/stephanedube
+41 course-level certificates earned inside the programs above. All verified badges: https://www.credly.com/users/stephanedube
 
 ## Key Achievements
 
 - Transitioned from web development and digital marketing into specialized AI model training (SFT & RLHF) for global AI projects.
-- Earned **5 professional certificates in 2022–2026** (2× Harvard, Google IT Support, Google IT Automation, Microsoft IT Support) plus an IBM DevOps & Software Engineering certificate in progress, 60+ Google skill badges, and 29 course-level certificates inside those programs.
+- Earned **7 professional certificates in 2022–2026** (2× Harvard, Google IT Support, Google IT Automation, Microsoft IT Support, Google Cloud Engineer, IBM DevOps & Software Engineering) — plus 60+ Google skill badges and 41 course-level certificates inside those programs.
 - Launched two productized AI services (MapleMind, Agent Evidence) from concept to production — including marketing, pricing, and sales.
 - Achieved **100% accuracy** on time-sensitive remote AI training workflows for a leading AI provider.

@@ -8,7 +8,7 @@ A single-page professional portfolio for **Stephane Dube** — IT Support Specia
 
 - **Modern light professional theme** — clean 3D hero, responsive layout, no frameworks
 - **AI chatbot demo** (`js/miniai.js`) — a real, client-side generative-bot simulation built from scratch; answers questions about skills, certifications, and experience via keyword-intent matching (~2.1.0)
-- **Certifications grid** — 6 professional certificates (Microsoft, Google, IBM, Harvard CS50) with a footnote for 60+ Google badges and 29 course certificates
+- **Certifications grid** — 7 professional certificates (Microsoft, Google, IBM, Harvard CS50, Google Cloud) with a footnote for 60+ Google badges and 41 course certificates
 - **Résumé downloads** — HTML + Markdown versions
 - **YouTube channel** — "White hair in tech" (AI progression videos)
 
