@@ -83,10 +83,10 @@ class OdinAgent {
             certificates: [
               "CS50 Introduction to AI — Harvard (2023)",
               "CS50 Programming with Python — Harvard (2022)",
-              "Google IT Support Professional Certificate — Coursera (2026)",
+              "Google IT Support Professional — Coursera (2026)",
               "Google IT Automation with Python Professional Certificate — Coursera (2026)",
               "Microsoft IT Support Specialist Professional Certificate — Microsoft (2026)",
-              "IBM DevOps & Software Engineering — IBM/Coursera (all 9 courses complete)",
+              "IBM DevOps & Software Engineering — IBM/Coursera (all 15 courses complete)",
               "Preparing for Google Cloud Certification: Cloud Engineer — Google Cloud/Coursera (all 6 courses complete)",
               "60+ Google skill badges (Gemini, LLMs, Generative AI, Responsible AI)"
             ],
