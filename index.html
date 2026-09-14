@@ -23,7 +23,9 @@
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/miniai.css">
+  <!-- UniversalChatbot (shared CDN) -->
+  <link rel="stylesheet" href="https://chatbot.stephanedube.dev/chatbot.css">
+  <link rel="stylesheet" href="https://chatbot.stephanedube.dev/theme/stephanedube.css">
 
 </head>
 <body>
@@ -476,45 +478,12 @@ plan  = agent.plan(<span class="c-str">"task"</span>)
     </div>
   </footer>
 
-  <!-- AI Chatbot Assistant (demo of agentic work) -->
-  <div class="chatbot-container">
-    <div class="chat-hint" id="chatHint"><i class="fa-solid fa-bolt"></i> Questions? Ask my AI assistant</div>
-    <div class="chat-icon" id="chatIcon" aria-label="Open Chat">
-      <i class="fas fa-comment-dots"></i>
-    </div>
-    <div class="chat-window" id="chatWindow">
-      <div class="chat-header">
-        <div class="chat-head-info">
-          <span class="chat-bot-avatar"><i class="fa-solid fa-robot"></i></span>
-          <div>
-            <h3>Odin Assistant</h3>
-            <span class="chat-sub">AI demo</span>
-          </div>
-        </div>
-        <button class="close-chat" id="closeChat" aria-label="Close Chat"><i class="fa-solid fa-x"></i></button>
-      </div>
-      <div class="chat-body">
-        <div class="chat-messages">
-          <div class="message bot-message">Hello! I'm Odin, Stephane's AI assistant. Ask me about his AI experience, certifications, or how to hire him — or tap a suggestion below.</div>
-        </div>
-        <div class="chat-suggestions">
-          <button class="suggestion" data-q="What are Stephane's skills?">Skills</button>
-          <button class="suggestion" data-q="What is his experience with AI?">AI Experience</button>
-          <button class="suggestion" data-q="Tell me about his certifications">Certifications</button>
-          <button class="suggestion" data-q="Is he available for work?">Availability</button>
-          <button class="suggestion" data-q="What are his rates?">Rates</button>
-        </div>
-      </div>
-      <div class="chat-footer">
-        <input type="text" id="chatInput" placeholder="Ask about Stephane..." autocomplete="off">
-        <button id="sendMessage" aria-label="Send"><i class="fa-solid fa-paper-plane"></i></button>
-      </div>
-    </div>
-  </div>
+  <!-- UniversalChatbot (shared CDN engine + data) -->
+  <script src="https://chatbot.stephanedube.dev/data/stephanedube.js"></script>
+  <script src="https://chatbot.stephanedube.dev/chatbot.js"></script>
 
   <!-- Scripts -->
   <script src="js/script.js"></script>
-  <script src="js/miniai.js"></script>
   <!-- Optional: Cloudflare Web Analytics -->
   <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "4eb0c241d7764285863bcd15f98bbfcb"}'></script>
 
