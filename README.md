@@ -2,7 +2,7 @@
 
 A single-page professional portfolio for **Stephane Dube** — IT Support Specialist, AI Engineering student, and safety-focused AI developer. Built with pure HTML, CSS, and vanilla JavaScript.
 
-**Live site:** [stephanedube.pages.dev](https://stephanedube.pages.dev)
+**Live site:** [stephane.stephanedube.dev](https://stephane.stephanedube.dev)
 
 ## What's inside
 

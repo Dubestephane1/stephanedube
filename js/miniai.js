@@ -348,7 +348,7 @@ class OdinAgent {
     p.projects.forEach((pr, i) => {
       out += `${i + 1}. ${pr.name} — ${pr.desc}\n`;
     });
-    out += `\nYou can browse his full app collection at https://odinforge.pages.dev`;
+    out += `\nYou can browse his full app collection at https://odinforge.stephanedube.dev`;
     return out;
   }
 
