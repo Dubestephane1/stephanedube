@@ -2,7 +2,7 @@
 
 **AI Engineer & Full-Stack Developer**
 
-Email: dubestephane@protonmail.com · Phone: +66 80-146-0954 · Location: Southeast Asia (Canadian, remote-first)
+Email: stephane@stephanedube.dev · Phone: +66 80-146-0954 · Location: Southeast Asia (Canadian, remote-first)
 
 Portfolio: https://odinforge.stephanedube.dev · Website: https://stephane.stephanedube.dev · GitHub: https://github.com/Dubestephane1 · LinkedIn: https://www.linkedin.com/in/dubestephane/ · Credly: https://www.credly.com/users/stephanedube
 

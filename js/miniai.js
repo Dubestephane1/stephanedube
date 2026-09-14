@@ -98,7 +98,7 @@ class OdinAgent {
               url: "https://www.skills.google/public_profiles/04a83f8f-3acf-40f5-9893-2fe1a235a5d3"
             },
             credly: "https://www.credly.com/users/stephanedube",
-            contactEmail: "dubestephane@protonmail.com",
+            contactEmail: "stephane@stephanedube.dev",
             links: {
               github: "https://github.com/Dubestephane1",
               linkedin: "https://www.linkedin.com/in/dubestephane/",
@@ -107,8 +107,8 @@ class OdinAgent {
             },
             resume: "Stephane_Dube.html",
             availability: "Open to new opportunities and collaborations — full-time, freelance, or contract, remote-first.",
-            hiring: "For hiring, the fastest path is email: dubestephane@protonmail.com. His résumé is one click away (the Resume button in the menu), and all verified badges are on Credly.",
-            rates: "Rates are tailored to each project's scope — reach out at dubestephane@protonmail.com for a quote."
+            hiring: "For hiring, the fastest path is email: stephane@stephanedube.dev. His résumé is one click away (the Resume button in the menu), and all verified badges are on Credly.",
+            rates: "Rates are tailored to each project's scope — reach out at stephane@stephanedube.dev for a quote."
           },
           interactionPatterns: {
             greeting: [
