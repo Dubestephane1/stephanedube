@@ -60,7 +60,7 @@ AI Engineer and Full-Stack Developer with deep expertise in Supervised Fine-Tuni
 
 ## Education & Certifications
 
-- **DevOps & Software Engineering Professional Certificate** – IBM · Coursera, 2026 (all 15 courses complete)
+- **DevOps & Software Engineering Professional Certificate** – IBM · Coursera, 2026
 - **IT Support Professional** – Google · Coursera, 2026
 - **IT Automation with Python Professional Certificate** – Google · Coursera, 2026
 - **Google Cloud Engineer** – Google Cloud · Coursera, 2026
