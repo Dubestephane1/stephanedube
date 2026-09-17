@@ -4,7 +4,7 @@
    Fonts: Sora (headings) · Inter (body) · JetBrains Mono (code)
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+/* (Google Fonts @font-face blocks are inlined into index.html; css/style.css has no @import) */
 
 /* === VARIABLES === */
 :root {
@@ -870,8 +870,8 @@ footer .f-links a:hover { color: var(--white); }
 .fade-in-section.is-visible { opacity: 1; transform: translateY(0); }
 
 @keyframes floatY {
-  0%, 100% { margin-top: 0; }
-  50% { margin-top: -14px; }
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
 }
 @keyframes spin {
   from { transform: translate(-50%, -50%) rotate(0deg); }
