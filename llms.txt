@@ -1,0 +1,28 @@
+# Stephane Dube - AI Engineer & Full-Stack Developer
+
+Portfolio site of Stephane Dube: AI Engineer & Full-Stack Developer. LLM fine-tuning (SFT/RLHF), AI agents, automation, and production web applications. Remote-ready, bilingual, 10+ years building software.
+
+## Key Pages
+- [Home / Portfolio](https://stephane.stephanedube.dev/)
+- [Resume](https://stephane.stephanedube.dev/Stephane_Dube.html)
+
+## Contact
+- Email: [stephane@stephanedube.dev](mailto:stephane@stephanedube.dev)
+- GitHub: https://github.com/Dubestephane1
+- LinkedIn: https://www.linkedin.com/in/dubestephane/
+- YouTube: https://www.youtube.com/channel/UCM1Jn1OxNLAX1_63gok7UQA
+
+## Projects
+- Odin - Autonomous AI Agent
+- OdinForge - App Portfolio (https://odinforge.stephanedube.dev/)
+- MapleMind - Document Intelligence
+- Agent Evidence - AI Governance
+
+## Notable Certifications
+- CS50 Introduction to Artificial Intelligence with Python (Harvard)
+- CS50 Programming with Python (Harvard)
+- Google IT Support Professional
+- Google IT Automation with Python
+- Google Cloud Engineer
+- Microsoft IT Support Specialist
+- IBM DevOps & Software Engineering
